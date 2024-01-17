@@ -11,6 +11,9 @@
 		241CB9332B5751D0008D2691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB9322B5751D0008D2691 /* ContentView.swift */; };
 		241CB9352B5751D4008D2691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241CB9342B5751D4008D2691 /* Assets.xcassets */; };
 		241CB9382B5751D4008D2691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241CB9372B5751D4008D2691 /* Preview Assets.xcassets */; };
+		2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B42B575B7700416DB6 /* ProfileView.swift */; };
+		2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B62B575B8600416DB6 /* ActionView.swift */; };
+		2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B92B575B9C00416DB6 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		241CB9322B5751D0008D2691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		241CB9342B5751D4008D2691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241CB9372B5751D4008D2691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2466C0B42B575B7700416DB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2466C0B62B575B8600416DB6 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		2466C0B92B575B9C00416DB6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				241CB9302B5751D0008D2691 /* GritApp.swift */,
+				2466C0A92B57582600416DB6 /* Core */,
 				241CB9322B5751D0008D2691 /* ContentView.swift */,
 				241CB9342B5751D4008D2691 /* Assets.xcassets */,
 				241CB9362B5751D4008D2691 /* Preview Content */,
@@ -65,6 +72,64 @@
 				241CB9372B5751D4008D2691 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2466C0A92B57582600416DB6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B02B575B3000416DB6 /* Home */,
+				2466C0AF2B575B2A00416DB6 /* Action */,
+				2466C0AA2B57586200416DB6 /* Profile */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2466C0AA2B57586200416DB6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B12B575B5B00416DB6 /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2466C0AF2B575B2A00416DB6 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B22B575B6200416DB6 /* Views */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		2466C0B02B575B3000416DB6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B32B575B6700416DB6 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2466C0B12B575B5B00416DB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2466C0B22B575B6200416DB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B62B575B8600416DB6 /* ActionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2466C0B32B575B6700416DB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B92B575B9C00416DB6 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
 				241CB9332B5751D0008D2691 /* ContentView.swift in Sources */,
+				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
+				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
