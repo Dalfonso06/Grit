@@ -14,6 +14,7 @@
 		2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B42B575B7700416DB6 /* ProfileView.swift */; };
 		2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B62B575B8600416DB6 /* ActionView.swift */; };
 		2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B92B575B9C00416DB6 /* HomeView.swift */; };
+		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2466C0B42B575B7700416DB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2466C0B62B575B8600416DB6 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		2466C0B92B575B9C00416DB6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		241CB92F2B5751D0008D2691 /* Grit */ = {
 			isa = PBXGroup;
 			children = (
+				2482B7822B5F58EF00A35D17 /* Extensions */,
 				241CB9302B5751D0008D2691 /* GritApp.swift */,
 				2466C0A92B57582600416DB6 /* Core */,
 				241CB9322B5751D0008D2691 /* ContentView.swift */,
@@ -130,6 +133,14 @@
 				2466C0B92B575B9C00416DB6 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2482B7822B5F58EF00A35D17 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2482B7832B5F590D00A35D17 /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
+				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
