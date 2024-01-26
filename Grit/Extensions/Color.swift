@@ -71,5 +71,4 @@ struct ColorTheme {
     let neutral8 = Color("neutral8")
     let neutral9 = Color("neutral9")
 
-
 }

@@ -15,6 +15,9 @@
 		2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B62B575B8600416DB6 /* ActionView.swift */; };
 		2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B92B575B9C00416DB6 /* HomeView.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
+		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
+		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
+		249181E92B63446A0009E089 /* MainColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E82B63446A0009E089 /* MainColorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		2466C0B62B575B8600416DB6 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		2466C0B92B575B9C00416DB6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
+		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
+		249181E82B63446A0009E089 /* MainColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainColorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +65,10 @@
 		241CB92F2B5751D0008D2691 /* Grit */ = {
 			isa = PBXGroup;
 			children = (
+				249181E02B61C3D40009E089 /* Concepts */,
+				2466C0A92B57582600416DB6 /* Core */,
 				2482B7822B5F58EF00A35D17 /* Extensions */,
 				241CB9302B5751D0008D2691 /* GritApp.swift */,
-				2466C0A92B57582600416DB6 /* Core */,
 				241CB9322B5751D0008D2691 /* ContentView.swift */,
 				241CB9342B5751D4008D2691 /* Assets.xcassets */,
 				241CB9362B5751D4008D2691 /* Preview Content */,
@@ -143,6 +150,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		249181E02B61C3D40009E089 /* Concepts */ = {
+			isa = PBXGroup;
+			children = (
+				249181E52B6343EB0009E089 /* Components */,
+				249181E32B61C3FF0009E089 /* ColorPaletteView.swift */,
+			);
+			path = Concepts;
+			sourceTree = "<group>";
+		};
+		249181E52B6343EB0009E089 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				249181E62B6344050009E089 /* PaletteCardView.swift */,
+				249181E82B63446A0009E089 /* MainColorView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,7 +240,10 @@
 			files = (
 				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
 				241CB9332B5751D0008D2691 /* ContentView.swift in Sources */,
+				249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */,
+				249181E92B63446A0009E089 /* MainColorView.swift in Sources */,
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
+				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
