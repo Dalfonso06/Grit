@@ -31,7 +31,7 @@ struct PaletteCardView<Content: View>: View {
         .padding()
         .padding(.vertical, 10)
         .background(
-            Color.white
+            Color(UIColor.systemBackground)
                 .cornerRadius(5)
                 .shadow(
                     color: Color.black.opacity(0.3),

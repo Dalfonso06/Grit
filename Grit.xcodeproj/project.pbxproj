@@ -18,6 +18,7 @@
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
 		249181E92B63446A0009E089 /* MainColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E82B63446A0009E089 /* MainColorView.swift */; };
+		249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181EA2B65972A0009E089 /* AlertColorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
 		249181E82B63446A0009E089 /* MainColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainColorView.swift; sourceTree = "<group>"; };
+		249181EA2B65972A0009E089 /* AlertColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertColorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				249181E62B6344050009E089 /* PaletteCardView.swift */,
 				249181E82B63446A0009E089 /* MainColorView.swift */,
+				249181EA2B65972A0009E089 /* AlertColorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
+				249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */,
 				241CB9332B5751D0008D2691 /* ContentView.swift in Sources */,
 				249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */,
 				249181E92B63446A0009E089 /* MainColorView.swift in Sources */,

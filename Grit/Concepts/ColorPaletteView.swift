@@ -13,6 +13,10 @@ struct ColorPaletteView: View {
             PaletteCardView(title: "Main Colors") {
                 MainColorView()
             }
+            
+            PaletteCardView(title: "Alert Colors") {
+                AlertColorView()
+            }
         }
     }
 }
