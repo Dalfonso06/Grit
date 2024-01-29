@@ -18,6 +18,7 @@ struct ColorPaletteView: View {
                 AlertColorView()
             }
         }
+        .background(Color("BackgroundColor"))
     }
 }
 
