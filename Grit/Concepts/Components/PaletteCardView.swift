@@ -31,12 +31,10 @@ struct PaletteCardView<Content: View>: View {
         .padding()
         .padding(.vertical, 10)
         .background(
-            Color(UIColor.systemBackground)
-                .cornerRadius(5)
-                .shadow(
-                    color: Color.black.opacity(0.3),
-                    radius: 10,
-                    x: 0.0, y: 10)
+            Color("BackgroundColor")
+                .cornerRadius(25)
+                .shadow(color: Color("LightShadow"), radius: 8, x: -8, y: -8)
+                .shadow(color: Color("DarkShadow"), radius: 8, x: 8, y: 8)
         )
         .padding(.horizontal, 20)
         .padding(.top, 10)
@@ -45,6 +43,6 @@ struct PaletteCardView<Content: View>: View {
 
 #Preview {
     PaletteCardView(title: "Title") {
-        Text("View")
+        Text("This is an example view to show off the text and background color of the new shadings.")
     }
 }
