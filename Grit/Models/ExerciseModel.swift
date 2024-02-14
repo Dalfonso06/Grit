@@ -19,11 +19,18 @@ import Foundation
  }
  */
 
-struct Exercise {
+struct Exercise: Identifiable, Codable {
     let id: Int
+    let author: Int
     let name: String
     let muscleGroup: String
     let description: String
     let sets: Int8
     let reps: [Int]
+    
+    enum CodingKeys: String, CodingKey {
+        case id, author, name
+        case muscleGroup = "muscle_group"
+        case description, sets, reps
+    }
 }

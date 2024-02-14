@@ -37,7 +37,11 @@ import Foundation
     ]
  */
 
-struct Routine {
+struct Routine: Identifiable, Codable {
     let id: Int
     let workouts: [Workout]
+    
+    enum CodingKeys: String, CodingKey {
+        case id, workouts
+    }
 }

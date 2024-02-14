@@ -35,10 +35,16 @@ import Foundation
  }
  */
 
-struct Workout {
+struct Workout: Identifiable, Codable {
     let id: Int
+    let author: Int
     let name: String
     let description: String
     let category: String
     let exercises: [Exercise]
+    
+    enum CodingKeys: String, CodingKey {
+        case id, author, name, description, category
+        case exercises
+    }
 }
