@@ -17,6 +17,7 @@
 		247B720D2B792D3B0025061C /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B720C2B792D3B0025061C /* WorkoutModel.swift */; };
 		247B720F2B796D500025061C /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B720E2B796D500025061C /* ExerciseModel.swift */; };
 		247B72112B7970930025061C /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B72102B7970930025061C /* RoutineModel.swift */; };
+		247B72192B8818380025061C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B72182B8818380025061C /* UserModel.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
@@ -37,6 +38,7 @@
 		247B720C2B792D3B0025061C /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		247B720E2B796D500025061C /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
 		247B72102B7970930025061C /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
+		247B72182B8818380025061C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				247B720C2B792D3B0025061C /* WorkoutModel.swift */,
 				247B720E2B796D500025061C /* ExerciseModel.swift */,
 				247B72102B7970930025061C /* RoutineModel.swift */,
+				247B72182B8818380025061C /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,7 +121,7 @@
 		2466C0AA2B57586200416DB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				2466C0B12B575B5B00416DB6 /* Views */,
+				247B72172B8817D90025061C /* ProfileView */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -126,7 +129,7 @@
 		2466C0AF2B575B2A00416DB6 /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				2466C0B22B575B6200416DB6 /* Views */,
+				247B72162B8817CA0025061C /* ActionView */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -134,33 +137,33 @@
 		2466C0B02B575B3000416DB6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2466C0B32B575B6700416DB6 /* Views */,
+				247B72152B8817BB0025061C /* HomeView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		2466C0B12B575B5B00416DB6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		2466C0B22B575B6200416DB6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2466C0B62B575B8600416DB6 /* ActionView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		2466C0B32B575B6700416DB6 /* Views */ = {
+		247B72152B8817BB0025061C /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
 				2466C0B92B575B9C00416DB6 /* HomeView.swift */,
 			);
-			path = Views;
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		247B72162B8817CA0025061C /* ActionView */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B62B575B8600416DB6 /* ActionView.swift */,
+			);
+			path = ActionView;
+			sourceTree = "<group>";
+		};
+		247B72172B8817D90025061C /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -274,6 +277,7 @@
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
+				247B72192B8818380025061C /* UserModel.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
