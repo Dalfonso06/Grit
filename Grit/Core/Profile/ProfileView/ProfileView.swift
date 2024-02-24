@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        ZStack {
-            Text("Profile View")
+        VStack {
+            ProfileNavbarView()
+            
+            Spacer()
         }
-        .padding()
     }
 }
 
