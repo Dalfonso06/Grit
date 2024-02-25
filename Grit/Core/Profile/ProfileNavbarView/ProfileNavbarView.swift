@@ -27,9 +27,16 @@ struct ProfileNavbarView: View {
                     .padding()
             })
         }
+        .overlay(
+            Rectangle()
+                .stroke(.gray, lineWidth: 1)
+                .frame(width: nil, height: 1) // Set height to 1 for bottom line
+                .offset(y: 20)
+        )
     }
 }
 
 @available(iOS 17, *) #Preview(traits: .sizeThatFitsLayout) {
     ProfileNavbarView(fullname: "Daniel Alfonso")
+        .padding()
 }
