@@ -22,7 +22,7 @@ struct ContentView: View {
                     Text("Action")
                 }
 
-            ProfileView()
+            ProfileView(fullname: "Daniel Alfonso")
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Profile")

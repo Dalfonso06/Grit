@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct ProfileNavbarView: View {
+    
+    @State var fullname: String
+    
     var body: some View {
         HStack {
+            Text(fullname)
+                .font(.title2)
+                .padding()
+            
             Spacer()
             
             Button(action: {
                 
             }, label: {
                 Image(systemName: "gear")
-                    .font(.largeTitle)
+                    .font(.title2)
                     .padding()
             })
         }
@@ -24,5 +31,5 @@ struct ProfileNavbarView: View {
 }
 
 @available(iOS 17, *) #Preview(traits: .sizeThatFitsLayout) {
-    ProfileNavbarView()
+    ProfileNavbarView(fullname: "Daniel Alfonso")
 }

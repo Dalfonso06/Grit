@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State var fullname: String
+    
     var body: some View {
-        VStack {
-            ProfileNavbarView()
-            
-            Spacer()
+        NavigationView {
+            VStack {
+                ProfileNavbarView(fullname: fullname)
+                
+                ScrollView {
+                    
+                }
+            }
         }
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(fullname: "Daniel Alfonso")
     }
 }
