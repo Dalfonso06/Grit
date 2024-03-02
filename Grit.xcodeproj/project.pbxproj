@@ -26,6 +26,8 @@
 		249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181EA2B65972A0009E089 /* AlertColorView.swift */; };
 		24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C017012B6737C300945665 /* BackgroundColorView.swift */; };
 		24C234802B8B9DC000B2B092 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2347F2B8B9DC000B2B092 /* CardView.swift */; };
+		24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */; };
+		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		249181EA2B65972A0009E089 /* AlertColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertColorView.swift; sourceTree = "<group>"; };
 		24C017012B6737C300945665 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
 		24C2347F2B8B9DC000B2B092 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 		2466C0AA2B57586200416DB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				24C234812B8C137300B2B092 /* ProfileHeaderView */,
 				247B721A2B89815D0025061C /* ProfileNavbarView */,
 				247B72172B8817D90025061C /* ProfileView */,
 			);
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				2482B7832B5F590D00A35D17 /* Color.swift */,
+				24C234862B93923900B2B092 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,6 +228,14 @@
 				24C017012B6737C300945665 /* BackgroundColorView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		24C234812B8C137300B2B092 /* ProfileHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */,
+			);
+			path = ProfileHeaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,10 +321,12 @@
 				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
+				24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
 				24C234802B8B9DC000B2B092 /* CardView.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
+				24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

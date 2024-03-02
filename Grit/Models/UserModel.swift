@@ -28,12 +28,13 @@ struct User: Identifiable, Codable {
     let lastName: String
     let followers: Int
     let following: Int
-    let profilePicture: String
+    let description: String?
+    let profilePicture: String?
     let createdAt: Date
     
     enum CodingKeys: String, CodingKey {
         case id, username, email
-        case followers, following
+        case followers, following, description
         case firstName = "first_name"
         case lastName = "last_name"
         case profilePicture = "profile_picture"

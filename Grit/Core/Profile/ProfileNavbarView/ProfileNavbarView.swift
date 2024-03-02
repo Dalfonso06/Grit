@@ -15,7 +15,7 @@ struct ProfileNavbarView: View {
         HStack {
             Text(fullname)
                 .font(.title2)
-                .padding()
+                .padding(.horizontal)
             
             Spacer()
             
@@ -24,19 +24,13 @@ struct ProfileNavbarView: View {
             }, label: {
                 Image(systemName: "gear")
                     .font(.title2)
-                    .padding()
+                    .padding(.horizontal)
             })
         }
-        .overlay(
-            Rectangle()
-                .stroke(.gray, lineWidth: 1)
-                .frame(width: nil, height: 1) // Set height to 1 for bottom line
-                .offset(y: 20)
-        )
+        .padding(.vertical)
     }
 }
 
 @available(iOS 17, *) #Preview(traits: .sizeThatFitsLayout) {
     ProfileNavbarView(fullname: "Daniel Alfonso")
-        .padding()
 }

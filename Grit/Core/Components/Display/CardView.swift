@@ -22,6 +22,7 @@ struct CardView<Content: View>: View {
                     .stroke(.gray, lineWidth: 1)
                     .frame(width: nil, height: 1) // Set height to 1 for bottom line
                     .offset(y: 20)
+                    .padding(.vertical)
             )
     }
 }
