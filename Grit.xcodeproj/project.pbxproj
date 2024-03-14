@@ -28,6 +28,7 @@
 		24C234802B8B9DC000B2B092 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2347F2B8B9DC000B2B092 /* CardView.swift */; };
 		24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */; };
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
+		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		24C2347F2B8B9DC000B2B092 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
+				24C234882BA2843000B2B092 /* ProfileViewModel.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 				24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */,
+				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
 				24C234802B8B9DC000B2B092 /* CardView.swift in Sources */,
@@ -464,7 +468,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,7 +499,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

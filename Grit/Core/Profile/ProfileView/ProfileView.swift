@@ -9,18 +9,16 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @State var fullname: String
-    @State var followers: Int
-    @State var following: Int
+    @StateObject var viewModel: ProfileViewModel
     
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                ProfileNavbarView(fullname: fullname)
+                ProfileNavbarView(fullname: viewModel.fullname)
                     
                 
                 ScrollView {
-                    ProfileHeaderView(followers: followers, following: following)
+                    ProfileHeaderView(followers: viewModel.followers, following: viewModel.following)
                 }
             }
         }
@@ -29,6 +27,12 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(fullname: "Daniel Alfonso", followers: 345, following: 320)
+        ProfileView(
+            viewModel: ProfileViewModel(
+                fullname: dev.user.firstName + " " + dev.user.lastName,
+                followers: dev.user.followers,
+                following: dev.user.following
+            )
+        )
     }
 }

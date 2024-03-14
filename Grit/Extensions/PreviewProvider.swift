@@ -23,7 +23,7 @@ class DeveloperPreview {
     let user = User(
         id: 0,
         username: "Dalfonso00",
-        email: "danielalfonso06@gmail.com", 
+        email: "danielalfonso06@gmail.com",
         firstName: "Daniel",
         lastName: "Alfonso",
         followers: 300,
