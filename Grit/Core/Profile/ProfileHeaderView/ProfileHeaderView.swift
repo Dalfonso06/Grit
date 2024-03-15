@@ -30,7 +30,7 @@ struct ProfileHeaderView: View {
             }
             
             HStack {
-                Text("Comfort is the enemy of progress. \nEmbrace the challenge and unlock your hidden potential. \n#EmbraceTheGrind #LevelUp")
+                Text("What people get wrong about motivation, is that they think it's a permanent solution.")
                     .font(.subheadline)
                 
                 Spacer()
