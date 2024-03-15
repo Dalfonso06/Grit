@@ -14,11 +14,16 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                ProfileNavbarView(fullname: viewModel.fullname)
+                ProfileNavbarView(viewModel: ProfileNavBarViewModel(fullname: viewModel.fullname))
                     
                 
                 ScrollView {
-                    ProfileHeaderView(followers: viewModel.followers, following: viewModel.following)
+                    ProfileHeaderView(
+                        viewModel: ProfileheaderViewModel(
+                            followers: viewModel.followers,
+                            following: viewModel.following
+                        )
+                    )
                 }
             }
         }

@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ProfileHeaderView: View {
     
-    @State var followers: Int
-    @State var following: Int
+    @StateObject var viewModel: ProfileheaderViewModel
     
     var body: some View {
         VStack {
@@ -23,10 +22,10 @@ struct ProfileHeaderView: View {
                 
                 Spacer()
                 
-                Text("Followers: \(followers)")
+                Text("Followers: \(viewModel.followers)")
                     .padding()
                 
-                Text("Following: \(following)")
+                Text("Following: \(viewModel.following)")
                     .padding()
             }
             
@@ -41,6 +40,8 @@ struct ProfileHeaderView: View {
     }
 }
 
-#Preview {
-    ProfileHeaderView(followers: 456, following: 360)
+struct ProfileHeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileHeaderView(viewModel: ProfileheaderViewModel(followers: dev.user.followers, following: dev.user.following))
+    }
 }

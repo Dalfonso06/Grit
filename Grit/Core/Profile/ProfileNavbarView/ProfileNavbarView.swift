@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ProfileNavbarView: View {
     
-    @State var fullname: String
+    @StateObject var viewModel: ProfileNavBarViewModel
     
     var body: some View {
         HStack {
-            Text(fullname)
+            Text(viewModel.fullname)
                 .font(.title2)
                 .padding(.horizontal)
             
@@ -31,6 +31,12 @@ struct ProfileNavbarView: View {
     }
 }
 
-@available(iOS 17, *) #Preview(traits: .sizeThatFitsLayout) {
-    ProfileNavbarView(fullname: "Daniel Alfonso")
+struct ProfileNavbarView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileNavbarView(
+            viewModel: ProfileNavBarViewModel(
+                fullname: dev.user.firstName + " " + dev.user.lastName
+            )
+        )
+    }
 }

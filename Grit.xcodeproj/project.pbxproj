@@ -29,6 +29,8 @@
 		24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */; };
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
+		24C2348B2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */; };
+		24C2348D2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavBarViewModel.swift; sourceTree = "<group>"; };
+		24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				247B721B2B8981780025061C /* ProfileNavbarView.swift */,
+				24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */,
 			);
 			path = ProfileNavbarView;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */,
+				24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */,
 			);
 			path = ProfileHeaderView;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				247B721C2B8981780025061C /* ProfileNavbarView.swift in Sources */,
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
 				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
+				24C2348B2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 				24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */,
@@ -329,6 +336,7 @@
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
 				24C234802B8B9DC000B2B092 /* CardView.swift in Sources */,
+				24C2348D2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
 				24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */,
 			);
