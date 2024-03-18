@@ -18,12 +18,19 @@
 		247B720F2B796D500025061C /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B720E2B796D500025061C /* ExerciseModel.swift */; };
 		247B72112B7970930025061C /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B72102B7970930025061C /* RoutineModel.swift */; };
 		247B72192B8818380025061C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B72182B8818380025061C /* UserModel.swift */; };
+		247B721C2B8981780025061C /* ProfileNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B721B2B8981780025061C /* ProfileNavbarView.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
 		249181E92B63446A0009E089 /* MainColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E82B63446A0009E089 /* MainColorView.swift */; };
 		249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181EA2B65972A0009E089 /* AlertColorView.swift */; };
 		24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C017012B6737C300945665 /* BackgroundColorView.swift */; };
+		24C234802B8B9DC000B2B092 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2347F2B8B9DC000B2B092 /* CardView.swift */; };
+		24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */; };
+		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
+		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
+		24C2348B2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */; };
+		24C2348D2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,12 +46,19 @@
 		247B720E2B796D500025061C /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
 		247B72102B7970930025061C /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
 		247B72182B8818380025061C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		247B721B2B8981780025061C /* ProfileNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavbarView.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
 		249181E82B63446A0009E089 /* MainColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainColorView.swift; sourceTree = "<group>"; };
 		249181EA2B65972A0009E089 /* AlertColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertColorView.swift; sourceTree = "<group>"; };
 		24C017012B6737C300945665 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
+		24C2347F2B8B9DC000B2B092 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavBarViewModel.swift; sourceTree = "<group>"; };
+		24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +125,7 @@
 		2466C0A92B57582600416DB6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				247B721D2B8B9CFC0025061C /* Components */,
 				2466C0B02B575B3000416DB6 /* Home */,
 				2466C0AF2B575B2A00416DB6 /* Action */,
 				2466C0AA2B57586200416DB6 /* Profile */,
@@ -121,6 +136,8 @@
 		2466C0AA2B57586200416DB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				24C234812B8C137300B2B092 /* ProfileHeaderView */,
+				247B721A2B89815D0025061C /* ProfileNavbarView */,
 				247B72172B8817D90025061C /* ProfileView */,
 			);
 			path = Profile;
@@ -162,14 +179,41 @@
 			isa = PBXGroup;
 			children = (
 				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
+				24C234882BA2843000B2B092 /* ProfileViewModel.swift */,
 			);
 			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		247B721A2B89815D0025061C /* ProfileNavbarView */ = {
+			isa = PBXGroup;
+			children = (
+				247B721B2B8981780025061C /* ProfileNavbarView.swift */,
+				24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */,
+			);
+			path = ProfileNavbarView;
+			sourceTree = "<group>";
+		};
+		247B721D2B8B9CFC0025061C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				247B721F2B8B9D120025061C /* Display */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		247B721F2B8B9D120025061C /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				24C2347F2B8B9DC000B2B092 /* CardView.swift */,
+			);
+			path = Display;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				2482B7832B5F590D00A35D17 /* Color.swift */,
+				24C234862B93923900B2B092 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +236,15 @@
 				24C017012B6737C300945665 /* BackgroundColorView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		24C234812B8C137300B2B092 /* ProfileHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */,
+				24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */,
+			);
+			path = ProfileHeaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,13 +325,20 @@
 				249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */,
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
 				249181E92B63446A0009E089 /* MainColorView.swift in Sources */,
+				247B721C2B8981780025061C /* ProfileNavbarView.swift in Sources */,
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
 				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
+				24C2348B2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
+				24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */,
+				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
+				24C234802B8B9DC000B2B092 /* CardView.swift in Sources */,
+				24C2348D2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
+				24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +476,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,7 +507,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
