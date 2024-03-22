@@ -19,10 +19,7 @@ struct ProfileView: View {
                 
                 ScrollView {
                     ProfileHeaderView(
-                        viewModel: ProfileheaderViewModel(
-                            followers: viewModel.followers,
-                            following: viewModel.following
-                        )
+                        viewModel: viewModel.profileHeaderViewModel
                     )
                 }
             }
@@ -35,8 +32,11 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView(
             viewModel: ProfileViewModel(
                 fullname: dev.user.firstName + " " + dev.user.lastName,
-                followers: dev.user.followers,
-                following: dev.user.following
+                profileHeaderViewModel: ProfileheaderViewModel(
+                    followers: dev.user.followers,
+                    following: dev.user.following,
+                    description: dev.user.description
+                )
             )
         )
     }

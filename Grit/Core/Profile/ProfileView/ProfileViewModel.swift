@@ -10,13 +10,11 @@ import Foundation
 class ProfileViewModel: ObservableObject {
     
     @Published var fullname: String
-    @Published var followers: Int
-    @Published var following: Int
+    @Published var profileHeaderViewModel: ProfileheaderViewModel
     
-    init(fullname: String, followers: Int, following: Int) {
+    init(fullname: String, profileHeaderViewModel: ProfileheaderViewModel) {
         self.fullname = fullname
-        self.followers = followers
-        self.following = following
+        self.profileHeaderViewModel = profileHeaderViewModel
     }
     
 }

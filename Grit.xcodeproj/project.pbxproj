@@ -25,7 +25,6 @@
 		249181E92B63446A0009E089 /* MainColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E82B63446A0009E089 /* MainColorView.swift */; };
 		249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181EA2B65972A0009E089 /* AlertColorView.swift */; };
 		24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C017012B6737C300945665 /* BackgroundColorView.swift */; };
-		24C234802B8B9DC000B2B092 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2347F2B8B9DC000B2B092 /* CardView.swift */; };
 		24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */; };
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
@@ -53,7 +52,6 @@
 		249181E82B63446A0009E089 /* MainColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainColorView.swift; sourceTree = "<group>"; };
 		249181EA2B65972A0009E089 /* AlertColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertColorView.swift; sourceTree = "<group>"; };
 		24C017012B6737C300945665 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
-		24C2347F2B8B9DC000B2B092 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -196,17 +194,8 @@
 		247B721D2B8B9CFC0025061C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				247B721F2B8B9D120025061C /* Display */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		247B721F2B8B9D120025061C /* Display */ = {
-			isa = PBXGroup;
-			children = (
-				24C2347F2B8B9DC000B2B092 /* CardView.swift */,
-			);
-			path = Display;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -335,7 +324,6 @@
 				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
-				24C234802B8B9DC000B2B092 /* CardView.swift in Sources */,
 				24C2348D2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
 				24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */,

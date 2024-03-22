@@ -28,7 +28,7 @@ class DeveloperPreview {
         lastName: "Alfonso",
         followers: 300,
         following: 250,
-        description: nil,
+        description: "What people get wrong about motivation is that they think it's a permanent solution.",
         profilePicture: nil,
         createdAt: Date()
     )

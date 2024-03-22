@@ -30,7 +30,7 @@ struct ProfileHeaderView: View {
             }
             
             HStack {
-                Text("What people get wrong about motivation, is that they think it's a permanent solution.")
+                Text(viewModel.description ?? "")
                     .font(.subheadline)
                 
                 Spacer()
@@ -42,6 +42,11 @@ struct ProfileHeaderView: View {
 
 struct ProfileHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileHeaderView(viewModel: ProfileheaderViewModel(followers: dev.user.followers, following: dev.user.following))
+        ProfileHeaderView(
+            viewModel: ProfileheaderViewModel(
+                followers: dev.user.followers,
+                following: dev.user.following,
+                description: dev.user.description
+            ))
     }
 }

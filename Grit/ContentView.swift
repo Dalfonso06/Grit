@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var viewModel: ContentViewModel
+    
     var body: some View {
         TabView {
             HomeView()
@@ -22,7 +25,7 @@ struct ContentView: View {
                     Text("Action")
                 }
 
-            ProfileView(viewModel: ProfileViewModel(fullname: "Daniel Alfonso", followers: 345, following: 345))
+            ProfileView(viewModel: viewModel.profileViewModel)
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -33,6 +36,24 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: ContentViewModel(
+            profileViewModel: ProfileViewModel(
+                fullname: dev.user.firstName + " " + dev.user.lastName,
+                profileHeaderViewModel: ProfileheaderViewModel(
+                    followers: dev.user.followers,
+                    following: dev.user.following,
+                    description: dev.user.description
+                )
+            )
+        ))
+    }
+}
+
+class ContentViewModel: ObservableObject {
+    
+    @Published var profileViewModel: ProfileViewModel
+    
+    init(profileViewModel: ProfileViewModel) {
+        self.profileViewModel = profileViewModel
     }
 }
