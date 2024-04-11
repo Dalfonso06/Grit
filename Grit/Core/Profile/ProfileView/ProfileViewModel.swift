@@ -9,12 +9,10 @@ import Foundation
 
 class ProfileViewModel: ObservableObject {
     
-    @Published var fullname: String
-    @Published var profileHeaderViewModel: ProfileheaderViewModel
+    @Published var firstname: String
     
-    init(fullname: String, profileHeaderViewModel: ProfileheaderViewModel) {
-        self.fullname = fullname
-        self.profileHeaderViewModel = profileHeaderViewModel
+    init(firstname: String) {
+        self.firstname = firstname
     }
     
 }

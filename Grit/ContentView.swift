@@ -38,12 +38,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(viewModel: ContentViewModel(
             profileViewModel: ProfileViewModel(
-                fullname: dev.user.firstName + " " + dev.user.lastName,
-                profileHeaderViewModel: ProfileheaderViewModel(
-                    followers: dev.user.followers,
-                    following: dev.user.following,
-                    description: dev.user.description
-                )
+                firstname: dev.user.firstName
             )
         ))
     }

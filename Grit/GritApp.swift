@@ -13,12 +13,7 @@ struct GritApp: App {
         WindowGroup {
             ContentView(viewModel: ContentViewModel(
                 profileViewModel: ProfileViewModel(
-                    fullname: "Daniel Alfonso",
-                    profileHeaderViewModel: ProfileheaderViewModel(
-                        followers: 345,
-                        following: 234,
-                        description: "What goes around comes around."
-                    )
+                    firstname: "Daniel"
                 )
             ))
         }
