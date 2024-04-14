@@ -29,7 +29,7 @@ class DeveloperPreview {
         followers: 300,
         following: 250,
         description: "What people get wrong about motivation is that they think it's a permanent solution.",
-        profilePicture: nil,
+        profilePicture: "GritPFP",
         createdAt: Date()
     )
     

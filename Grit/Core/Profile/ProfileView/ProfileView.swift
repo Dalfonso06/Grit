@@ -13,26 +13,45 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
+            ScrollView {
+                ProfileHeaderView(
+                    firstname: viewModel.firstname,
+                    profilePicture: viewModel.profilePicture
+                )
+                .frame(width: .infinity)
+                .padding(.vertical)
                 
-                ScrollView {
-                    ProfileHeaderView(firstname: "Daniel", profilePicture: "GritPFP")
-                        .padding()
-                    
-                    workoutList
-                        .padding()
-                }
-                .navigationTitle("Profile Page")
+                workoutList
+                    .padding(.vertical, 20)
             }
+            .navigationTitle("Profile Page")
         }
+        .background(Color.blue)
     }
     
     var workoutList: some View {
-        ScrollView(.horizontal) {
-            LazyHGrid(rows: [GridItem(.flexible(), spacing: 6, alignment: nil)], content: {
-                /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
-                /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
-            })
+        VStack(alignment: .leading) {
+            
+            Text("Workouts")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.horizontal)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(alignment: .top) {
+                    ForEach(0..<3) { index in
+                        WorkoutCardView(
+                            workoutName: "Test",
+                            firstname: "Daniel",
+                            tags: ["Test", "Chest", "Abs"],
+                            description: "This is a test workout"
+                        )
+                        .padding()
+                        .scrollTargetLayout()
+                    }
+                }
+            }
+            .scrollTargetBehavior(.viewAligned)
         }
     }
 }
@@ -41,7 +60,8 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(
             viewModel: ProfileViewModel(
-                firstname: dev.user.firstName
+                firstname: dev.user.firstName,
+                profilePicture: dev.user.profilePicture ?? ""
             )
         )
     }

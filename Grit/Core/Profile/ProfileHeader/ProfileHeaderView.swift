@@ -8,11 +8,38 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
+    
+    @State var firstname: String
+    @State var profilePicture: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Image(profilePicture)
+                    .resizable()
+                    .frame(width: 120, height: 120)
+                    .clipShape(
+                        RoundedRectangle(cornerRadius: 30)
+                    )
+                    .padding(.trailing, 20)
+                
+                
+                
+                VStack(alignment: .leading) {
+                    Text("Hello \(firstname)")
+                        .foregroundColor(.gray)
+                        .fontWeight(.semibold)
+                    
+                    Text("Welcome")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                }
+                .padding(.leading, 20)
+            }
+        }
     }
 }
 
 #Preview {
-    ProfileHeaderView()
+    ProfileHeaderView(firstname: "Daniel", profilePicture: "GritPFP")
 }

@@ -10,9 +10,11 @@ import Foundation
 class ProfileViewModel: ObservableObject {
     
     @Published var firstname: String
+    @Published var profilePicture: String
     
-    init(firstname: String) {
+    init(firstname: String, profilePicture: String) {
         self.firstname = firstname
+        self.profilePicture = profilePicture
     }
     
 }
