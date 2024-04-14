@@ -16,7 +16,10 @@ struct ProfileView: View {
             VStack(spacing: 0) {
                 
                 ScrollView {
-                    header
+                    ProfileHeaderView(firstname: "Daniel", profilePicture: "GritPFP")
+                        .padding()
+                    
+                    workoutList
                         .padding()
                 }
                 .navigationTitle("Profile Page")
@@ -24,30 +27,12 @@ struct ProfileView: View {
         }
     }
     
-    var header: some View {
-        VStack {
-            HStack {
-                Image("GritPFP")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .clipShape(
-                        RoundedRectangle(cornerRadius: 30)
-                    )
-                    .padding(.trailing, 20)
-                
-                
-                
-                VStack(alignment: .leading) {
-                    Text("Hello \(viewModel.firstname)")
-                        .foregroundColor(.gray)
-                        .fontWeight(.semibold)
-                    
-                    Text("Welcome")
-                        .font(.title)
-                        .fontWeight(.heavy)
-                }
-                .padding(.leading, 20)
-            }
+    var workoutList: some View {
+        ScrollView(.horizontal) {
+            LazyHGrid(rows: [GridItem(.flexible(), spacing: 6, alignment: nil)], content: {
+                /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+            })
         }
     }
 }
