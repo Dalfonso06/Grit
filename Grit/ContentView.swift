@@ -39,7 +39,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(viewModel: ContentViewModel(
             profileViewModel: ProfileViewModel(
                 firstname: dev.user.firstName,
-                profilePicture: dev.user.profilePicture ?? ""
+                profilePicture: dev.user.profilePicture ?? "",
+                workouts: dev.workouts
             )
         ))
     }

@@ -39,15 +39,15 @@ struct ProfileView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top) {
-                    ForEach(0..<3) { index in
+                    ForEach(viewModel.workouts) { workout in
                         WorkoutCardView(
-                            workoutName: "Test",
+                            workoutName: workout.name,
                             firstname: "Daniel",
-                            tags: ["Test", "Chest", "Abs"],
-                            description: "This is a test workout"
+                            tags: workout.tags,
+                            description: workout.description
                         )
-                        .padding()
                         .scrollTargetLayout()
+                        .padding()
                     }
                 }
             }
@@ -61,7 +61,8 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView(
             viewModel: ProfileViewModel(
                 firstname: dev.user.firstName,
-                profilePicture: dev.user.profilePicture ?? ""
+                profilePicture: dev.user.profilePicture ?? "",
+                workouts: dev.workouts
             )
         )
     }
