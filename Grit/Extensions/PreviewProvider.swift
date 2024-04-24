@@ -45,7 +45,7 @@ class DeveloperPreview {
         Workout(
             id: 2,
             author: 0,
-            name: "Killer Legs",
+            name: "Legs (Quad Focussed)",
             description: "This intense leg workout will challenge your quads, hamstrings, and calves, leaving you feeling the burn and ready for growth. It combines compound exercises like squats and deadlifts with targeted movements like leg press and hamstring curls to sculpt and strengthen your entire lower body.",
             tags: ["Legs", "Lower Body", "Strength"],
             exercises: []
@@ -53,7 +53,7 @@ class DeveloperPreview {
         Workout(
             id: 3,
             author: 0,
-            name: "Back Destroyer",
+            name: "Back",
             description: "Get ready to build a strong and defined back with this killer workout. It focuses on hitting all the major back muscles, including lats, traps, and rhomboids. Prepare to feel the burn as you perform a variety of exercises that will challenge your pulling strength and build serious back mass.",
             tags: ["Back", "Posterior Chain", "Strength"],
             exercises: []

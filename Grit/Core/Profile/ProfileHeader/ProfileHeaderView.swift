@@ -19,11 +19,11 @@ struct ProfileHeaderView: View {
                     .resizable()
                     .frame(width: 120, height: 120)
                     .clipShape(
-                        RoundedRectangle(cornerRadius: 30)
+                        RoundedRectangle(cornerRadius: DesignConstants.cornerRadius)
                     )
-                    .padding(.trailing, 20)
                 
                 
+                Spacer()
                 
                 VStack(alignment: .leading) {
                     Text("Hello \(firstname)")
@@ -34,12 +34,23 @@ struct ProfileHeaderView: View {
                         .font(.title)
                         .fontWeight(.heavy)
                 }
-                .padding(.leading, 20)
+                
+                Spacer()
             }
         }
+        .frame(maxWidth: .infinity)
+        .padding(DesignConstants.padding)
+        .background()
+        .cornerRadius(DesignConstants.cornerRadius)
+        .padding(DesignConstants.padding)
     }
 }
 
 #Preview {
-    ProfileHeaderView(firstname: "Daniel", profilePicture: "GritPFP")
+    ZStack {
+        Color("BackgroundColor")
+            .ignoresSafeArea()
+        
+        ProfileHeaderView(firstname: "Daniel", profilePicture: "GritPFP")
+    }
 }

@@ -24,9 +24,9 @@ struct ProfileView: View {
                 workoutList
                     .padding(.vertical, 20)
             }
+            .background(Color("BackgroundColor"))
             .navigationTitle("Profile Page")
         }
-        .background(Color.blue)
     }
     
     var workoutList: some View {

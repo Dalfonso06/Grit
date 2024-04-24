@@ -17,7 +17,6 @@ struct WorkoutCardView: View {
     var body: some View {
         VStack(alignment: .leading) {
             ZStack(alignment: .leading) {
-                Color.theme.neutral1
                 
                 VStack(alignment: .leading) {
                     Text(workoutName)
@@ -30,7 +29,7 @@ struct WorkoutCardView: View {
                         .foregroundColor(Color.theme.neutral4)
                         .fontWeight(.semibold)
                 }
-                .padding(.leading)
+                .padding()
             }
             .padding(.bottom)
             .frame(height: 90)
@@ -40,8 +39,6 @@ struct WorkoutCardView: View {
             Text(description)
                 .padding(.horizontal)
                 .font(.caption)
-            
-            Spacer()
             
             HStack {
                 ForEach(tags.prefix(3), id: \.self) { tag in

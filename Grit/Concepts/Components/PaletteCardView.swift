@@ -18,26 +18,31 @@ struct PaletteCardView<Content: View>: View {
     }
     
     var body: some View {
-        VStack {
-            VStack {
-                Text("\(title)")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 5)
-                
-                content
-            }
-        }
-        .padding()
-        .padding(.vertical, 10)
-        .background(
+        ZStack {
             Color("BackgroundColor")
-                .cornerRadius(25)
-                .shadow(color: Color("LightShadow"), radius: 8, x: -8, y: -8)
-                .shadow(color: Color("DarkShadow"), radius: 8, x: 8, y: 8)
-        )
-        .padding(.horizontal, 20)
+                .ignoresSafeArea()
+            
+            VStack {
+                VStack {
+                    Text("\(title)")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 5)
+                    
+                    content
+                }
+            }
+            .padding()
+            .padding(.vertical, 10)
+            .background(
+                Color("BackgroundColor")
+                    .cornerRadius(25)
+                    .shadow(color: Color("LightShadow"), radius: 8, x: -8, y: -8)
+                    .shadow(color: Color("DarkShadow"), radius: 8, x: 8, y: 8)
+            )
+            .padding(.horizontal, 20)
         .padding(.top, 10)
+        }
     }
 }
 

@@ -25,7 +25,7 @@ struct Exercise: Identifiable, Codable {
     let id: Int
     let author: Int
     let name: String
-    let muscleGroup: MuscleGroupModel
+    let muscleGroup: MuscleGroupModel?
     let description: String
     let reps: [Int]
     
