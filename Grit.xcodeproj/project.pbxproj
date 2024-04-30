@@ -28,6 +28,7 @@
 		2495CE892BCC28A600FF34DC /* MuscleGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE882BCC28A600FF34DC /* MuscleGroupModel.swift */; };
 		2495CE8D2BCC2BDD00FF34DC /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE8C2BCC2BDD00FF34DC /* TagView.swift */; };
 		2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE8F2BD42BD800FF34DC /* DesignConstants.swift */; };
+		2495CE942BE0667500FF34DC /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE932BE0667500FF34DC /* WorkoutView.swift */; };
 		24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C017012B6737C300945665 /* BackgroundColorView.swift */; };
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
@@ -56,6 +57,7 @@
 		2495CE882BCC28A600FF34DC /* MuscleGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupModel.swift; sourceTree = "<group>"; };
 		2495CE8C2BCC2BDD00FF34DC /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		2495CE8F2BD42BD800FF34DC /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
+		2495CE932BE0667500FF34DC /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		24C017012B6737C300945665 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
 		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				2495CE862BCB4F0E00FF34DC /* WorkoutCardView.swift */,
+				2495CE932BE0667500FF34DC /* WorkoutView.swift */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
 				2495CE822BCB45AA00FF34DC /* ProfileHeaderView.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
+				2495CE942BE0667500FF34DC /* WorkoutView.swift in Sources */,
 				2495CE892BCC28A600FF34DC /* MuscleGroupModel.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
