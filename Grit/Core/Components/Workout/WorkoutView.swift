@@ -9,29 +9,48 @@ import SwiftUI
 
 struct WorkoutView: View {
     
-    var exercises: [String] = ["Bench", "Incline Bench", "Chest Flys", "Dips"]
+    @State private var exercises: [String] = ["Bench", "Incline Bench", "Chest Flys", "Dips"]
+    @State private var addingExercise: Bool = false
+    
+    @State private var tempExercise: String = ""
     
     var body: some View {
         List {
-            Section(header:
-                Text("Exercises")
-            ) {
-                ForEach(exercises, id: \.self) { exercise in
-                    Text(exercise)
-                }
+            ForEach(exercises, id: \.self) { exercise in
+                Text(exercise)
+            }
+            .onDelete(perform: { indexSet in
+                exercises.remove(atOffsets: indexSet)
+            })
+            
+            if (addingExercise) {
+                TextField("Exercise", text: $tempExercise)
+                    .onSubmit {
+                        exercises.append(tempExercise)
+                        tempExercise = ""
+                        addingExercise = false
+                    }
             }
             
-            
-            Image(systemName: "plus.circle.fill")
-                .foregroundColor(Color.theme.main4)
-                .padding(.top)
-                .font(.title)
-                .listSectionSeparator(.hidden)
+            Button(action: {
+                addingExercise.toggle()
+                tempExercise = ""
+            }, label: {
+                Image(systemName: addingExercise ? "minus.circle.fill" : "plus.circle.fill")
+                    .foregroundColor(Color.theme.main4)
+                    .padding(.top)
+                    .font(.title)
+            })
+            .listSectionSeparator(.hidden)
         }
         .listStyle(.plain)
+        .navigationTitle("Exercises")
     }
 }
 
 #Preview {
-    WorkoutView()
+    NavigationView(content: {
+        WorkoutView()
+    })
+    
 }
