@@ -10,14 +10,25 @@ import Foundation
 /*
  Exercise Json:
  {
-     "id": 1,
-     "name": "Bench Press",
-     "muscle_group": {
-        "id": 1,
-        "name": "chest"
+   "Id": 1,
+   "Author": "Daniel Alfonso"
+   "Name": "Bench Press",
+   "MuscleGroup": "Chest",
+   "Description": "A compound exercise that targets the chest, shoulders, and triceps.",
+   "Reps": [
+     {
+       "MinReps": 8,
+       "MaxReps": 12
      },
-     "description": "Free weight barbell workout.",
-     "reps": [4, 6, 12, 12]
+     {
+       "MinReps": 8,
+       "MaxReps": 12
+     },
+     {
+       "MinReps": 8,
+       "MaxReps": 12
+     }
+   ]
  }
  */
 

@@ -43,7 +43,7 @@ struct WorkoutView: View {
             })
             .listSectionSeparator(.hidden)
         }
-        .listStyle(.plain)
+        .listStyle(.automatic)
         .navigationTitle("Exercises")
     }
 }
