@@ -52,13 +52,16 @@
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
 		249181E92B63446A0009E089 /* MainColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E82B63446A0009E089 /* MainColorView.swift */; };
 		249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181EA2B65972A0009E089 /* AlertColorView.swift */; };
+		2495CE822BCB45AA00FF34DC /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE812BCB45AA00FF34DC /* ProfileHeaderView.swift */; };
+		2495CE872BCB4F0E00FF34DC /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE862BCB4F0E00FF34DC /* WorkoutCardView.swift */; };
+		2495CE892BCC28A600FF34DC /* MuscleGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE882BCC28A600FF34DC /* MuscleGroupModel.swift */; };
+		2495CE8D2BCC2BDD00FF34DC /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE8C2BCC2BDD00FF34DC /* TagView.swift */; };
+		2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE8F2BD42BD800FF34DC /* DesignConstants.swift */; };
+		2495CE942BE0667500FF34DC /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE932BE0667500FF34DC /* WorkoutView.swift */; };
+		2495CE972BFD85AA00FF34DC /* ExerciseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495CE962BFD85AA00FF34DC /* ExerciseCellView.swift */; };
 		24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C017012B6737C300945665 /* BackgroundColorView.swift */; };
-		24C234802B8B9DC000B2B092 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2347F2B8B9DC000B2B092 /* CardView.swift */; };
-		24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */; };
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
-		24C2348B2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */; };
-		24C2348D2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,19 +77,21 @@
 		247B720E2B796D500025061C /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
 		247B72102B7970930025061C /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
 		247B72182B8818380025061C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		247B721B2B8981780025061C /* ProfileNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavbarView.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
 		249181E82B63446A0009E089 /* MainColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainColorView.swift; sourceTree = "<group>"; };
 		249181EA2B65972A0009E089 /* AlertColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertColorView.swift; sourceTree = "<group>"; };
+		2495CE812BCB45AA00FF34DC /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		2495CE862BCB4F0E00FF34DC /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
+		2495CE882BCC28A600FF34DC /* MuscleGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupModel.swift; sourceTree = "<group>"; };
+		2495CE8C2BCC2BDD00FF34DC /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		2495CE8F2BD42BD800FF34DC /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
+		2495CE932BE0667500FF34DC /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		2495CE962BFD85AA00FF34DC /* ExerciseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCellView.swift; sourceTree = "<group>"; };
 		24C017012B6737C300945665 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
-		24C2347F2B8B9DC000B2B092 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavBarViewModel.swift; sourceTree = "<group>"; };
-		24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +152,7 @@
 		241CB92F2B5751D0008D2691 /* Grit */ = {
 			isa = PBXGroup;
 			children = (
+				2495CE8E2BD42BAC00FF34DC /* Constants */,
 				249181E02B61C3D40009E089 /* Concepts */,
 				2466C0A92B57582600416DB6 /* Core */,
 				2482B7822B5F58EF00A35D17 /* Extensions */,
@@ -174,6 +180,7 @@
 				247B720E2B796D500025061C /* ExerciseModel.swift */,
 				247B72102B7970930025061C /* RoutineModel.swift */,
 				247B72182B8818380025061C /* UserModel.swift */,
+				2495CE882BCC28A600FF34DC /* MuscleGroupModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,9 +199,8 @@
 		2466C0AA2B57586200416DB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				24C234812B8C137300B2B092 /* ProfileHeaderView */,
-				247B721A2B89815D0025061C /* ProfileNavbarView */,
-				247B72172B8817D90025061C /* ProfileView */,
+				2495CE7E2BCB456C00FF34DC /* ProfileHeader */,
+				2495CE832BCB486500FF34DC /* ProfileView */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -231,38 +237,14 @@
 			path = ActionView;
 			sourceTree = "<group>";
 		};
-		247B72172B8817D90025061C /* ProfileView */ = {
-			isa = PBXGroup;
-			children = (
-				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
-				24C234882BA2843000B2B092 /* ProfileViewModel.swift */,
-			);
-			path = ProfileView;
-			sourceTree = "<group>";
-		};
-		247B721A2B89815D0025061C /* ProfileNavbarView */ = {
-			isa = PBXGroup;
-			children = (
-				247B721B2B8981780025061C /* ProfileNavbarView.swift */,
-				24C2348A2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift */,
-			);
-			path = ProfileNavbarView;
-			sourceTree = "<group>";
-		};
 		247B721D2B8B9CFC0025061C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				247B721F2B8B9D120025061C /* Display */,
+				2495CE952BFD858800FF34DC /* Exercise */,
+				2495CE8B2BCC2BCF00FF34DC /* Tags */,
+				2495CE852BCB4EEE00FF34DC /* Workout */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		247B721F2B8B9D120025061C /* Display */ = {
-			isa = PBXGroup;
-			children = (
-				24C2347F2B8B9DC000B2B092 /* CardView.swift */,
-			);
-			path = Display;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -294,13 +276,54 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		24C234812B8C137300B2B092 /* ProfileHeaderView */ = {
+		2495CE7E2BCB456C00FF34DC /* ProfileHeader */ = {
 			isa = PBXGroup;
 			children = (
-				24C234822B8C138C00B2B092 /* ProfileHeaderView.swift */,
-				24C2348C2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift */,
+				2495CE812BCB45AA00FF34DC /* ProfileHeaderView.swift */,
 			);
-			path = ProfileHeaderView;
+			path = ProfileHeader;
+			sourceTree = "<group>";
+		};
+		2495CE832BCB486500FF34DC /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
+				24C234882BA2843000B2B092 /* ProfileViewModel.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		2495CE852BCB4EEE00FF34DC /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				2495CE862BCB4F0E00FF34DC /* WorkoutCardView.swift */,
+				2495CE932BE0667500FF34DC /* WorkoutView.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		2495CE8B2BCC2BCF00FF34DC /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				2495CE8C2BCC2BDD00FF34DC /* TagView.swift */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
+		2495CE8E2BD42BAC00FF34DC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2495CE8F2BD42BD800FF34DC /* DesignConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2495CE952BFD858800FF34DC /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				2495CE962BFD85AA00FF34DC /* ExerciseCellView.swift */,
+			);
+			path = Exercise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,19 +436,21 @@
 				247B72112B7970930025061C /* RoutineModel.swift in Sources */,
 				249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */,
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
+				2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */,
 				249181E92B63446A0009E089 /* MainColorView.swift in Sources */,
-				247B721C2B8981780025061C /* ProfileNavbarView.swift in Sources */,
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
 				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
-				24C2348B2BA3DA9F00B2B092 /* ProfileNavBarViewModel.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
+				2495CE8D2BCC2BDD00FF34DC /* TagView.swift in Sources */,
+				2495CE872BCB4F0E00FF34DC /* WorkoutCardView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
-				24C234832B8C138C00B2B092 /* ProfileHeaderView.swift in Sources */,
 				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
+				2495CE822BCB45AA00FF34DC /* ProfileHeaderView.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
+				2495CE942BE0667500FF34DC /* WorkoutView.swift in Sources */,
+				2495CE892BCC28A600FF34DC /* MuscleGroupModel.swift in Sources */,
+				2495CE972BFD85AA00FF34DC /* ExerciseCellView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
-				24C234802B8B9DC000B2B092 /* CardView.swift in Sources */,
-				24C2348D2BA3DC4500B2B092 /* ProfileHeaderViewModel.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
 				24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */,
 			);

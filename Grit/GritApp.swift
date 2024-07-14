@@ -11,7 +11,13 @@ import SwiftUI
 struct GritApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: ContentViewModel(
+                profileViewModel: ProfileViewModel(
+                    firstname: "Daniel",
+                    profilePicture: "GritPFP",
+                    workouts: [Workout(id: 0, author: 0, name: " ", description: " ", tags: [" "], exercises: [])]
+                )
+            ))
         }
     }
 }

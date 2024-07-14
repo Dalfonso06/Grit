@@ -13,19 +13,45 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
-                ProfileNavbarView(viewModel: ProfileNavBarViewModel(fullname: viewModel.fullname))
-                    
+            ScrollView {
+                ProfileHeaderView(
+                    firstname: viewModel.firstname,
+                    profilePicture: viewModel.profilePicture
+                )
+                .frame(width: .infinity)
+                .padding(.vertical)
                 
-                ScrollView {
-                    ProfileHeaderView(
-                        viewModel: ProfileheaderViewModel(
-                            followers: viewModel.followers,
-                            following: viewModel.following
+                workoutList
+                    .padding(.vertical, 20)
+            }
+            .background(Color("BackgroundColor"))
+            .navigationTitle("Profile Page")
+        }
+    }
+    
+    var workoutList: some View {
+        VStack(alignment: .leading) {
+            
+            Text("Workouts")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.horizontal)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(alignment: .top) {
+                    ForEach(viewModel.workouts) { workout in
+                        WorkoutCardView(
+                            workoutName: workout.name,
+                            firstname: "Daniel",
+                            tags: workout.tags,
+                            description: workout.description
                         )
-                    )
+                        .scrollTargetLayout()
+                        .padding()
+                    }
                 }
             }
+            .scrollTargetBehavior(.viewAligned)
         }
     }
 }
@@ -34,9 +60,9 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(
             viewModel: ProfileViewModel(
-                fullname: dev.user.firstName + " " + dev.user.lastName,
-                followers: dev.user.followers,
-                following: dev.user.following
+                firstname: dev.user.firstName,
+                profilePicture: dev.user.profilePicture ?? "",
+                workouts: dev.workouts
             )
         )
     }

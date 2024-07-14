@@ -9,14 +9,16 @@ import Foundation
 
 class ProfileViewModel: ObservableObject {
     
-    @Published var fullname: String
-    @Published var followers: Int
-    @Published var following: Int
+    @Published var firstname: String
+    @Published var profilePicture: String
+    @Published var workouts: [Workout]
     
-    init(fullname: String, followers: Int, following: Int) {
-        self.fullname = fullname
-        self.followers = followers
-        self.following = following
+    init(firstname: String, profilePicture: String, workouts: [Workout]) {
+        self.firstname = firstname
+        self.profilePicture = profilePicture
+        self.workouts = workouts
+        
+        print(workouts)
     }
     
 }
