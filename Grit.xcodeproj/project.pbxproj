@@ -26,6 +26,9 @@
 		247BB6122C445CD500EFD77F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 247BB6112C445CD500EFD77F /* FirebaseStorage */; };
 		247BB6182C518A5400EFD77F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 247BB6172C518A5400EFD77F /* GoogleService-Info.plist */; };
 		247BB61B2C518ABB00EFD77F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 247BB61A2C518ABB00EFD77F /* FirebaseAnalytics */; };
+		247BB61F2C58DC3B00EFD77F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB61E2C58DC3B00EFD77F /* LoginView.swift */; };
+		247BB6212C58DE4C00EFD77F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6202C58DE4C00EFD77F /* LoginViewModel.swift */; };
+		247BB6242C58DEC600EFD77F /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6232C58DEC600EFD77F /* AuthenticationService.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
@@ -57,6 +60,9 @@
 		247B72102B7970930025061C /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
 		247B72182B8818380025061C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		247BB6172C518A5400EFD77F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		247BB61E2C58DC3B00EFD77F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		247BB6202C58DE4C00EFD77F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		247BB6232C58DEC600EFD77F /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 		241CB92F2B5751D0008D2691 /* Grit */ = {
 			isa = PBXGroup;
 			children = (
+				247BB6222C58DEB600EFD77F /* Services */,
 				2495CE8E2BD42BAC00FF34DC /* Constants */,
 				249181E02B61C3D40009E089 /* Concepts */,
 				2466C0A92B57582600416DB6 /* Core */,
@@ -149,6 +156,7 @@
 		2466C0A92B57582600416DB6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				247BB61C2C58DC1600EFD77F /* Authentication */,
 				247B721D2B8B9CFC0025061C /* Components */,
 				2466C0B02B575B3000416DB6 /* Home */,
 				2466C0AF2B575B2A00416DB6 /* Action */,
@@ -213,6 +221,31 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		247BB61C2C58DC1600EFD77F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				247BB61D2C58DC2600EFD77F /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		247BB61D2C58DC2600EFD77F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				247BB61E2C58DC3B00EFD77F /* LoginView.swift */,
+				247BB6202C58DE4C00EFD77F /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		247BB6222C58DEB600EFD77F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				247BB6232C58DEC600EFD77F /* AuthenticationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -385,11 +418,14 @@
 				249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */,
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
 				2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */,
+				247BB6212C58DE4C00EFD77F /* LoginViewModel.swift in Sources */,
 				249181E92B63446A0009E089 /* MainColorView.swift in Sources */,
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
 				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
+				247BB6242C58DEC600EFD77F /* AuthenticationService.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				2495CE8D2BCC2BDD00FF34DC /* TagView.swift in Sources */,
+				247BB61F2C58DC3B00EFD77F /* LoginView.swift in Sources */,
 				2495CE872BCB4F0E00FF34DC /* WorkoutCardView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
