@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 // User Profile Json:
 // {
@@ -20,24 +21,14 @@ import Foundation
 //   "created_at": "2023-11-23T08:12:00Z"
 // }
 
-struct User: Identifiable, Codable {
-    let id: Int
-    let username: String
-    let email: String
-    let firstName: String
-    let lastName: String
-    let followers: Int
-    let following: Int
-    let description: String?
-    let profilePicture: String?
-    let createdAt: Date
+struct User {
+    let uid: String
+    let email: String?
+    let photoUrl: String?
     
-    enum CodingKeys: String, CodingKey {
-        case id, username, email
-        case followers, following, description
-        case firstName = "first_name"
-        case lastName = "last_name"
-        case profilePicture = "profile_picture"
-        case createdAt = "created_at"
+    init(user: FirebaseAuth.User) {
+        self.uid = user.uid
+        self.email = user.email
+        self.photoUrl = user.photoURL?.absoluteString
     }
 }

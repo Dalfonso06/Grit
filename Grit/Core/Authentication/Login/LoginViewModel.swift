@@ -19,6 +19,24 @@ class LoginViewModel: ObservableObject {
     private let authService = AuthenticationService()
     
     func signIn() -> Void {
-        authService.signIn(email: self.email, password: self.password)
+        guard !email.isEmpty, !password.isEmpty else {
+            self.errorMessage = "Please input empty fields."
+            return
+        }
+        
+        self.isLoading.toggle()
+        self.errorMessage = nil
+        
+        Task {
+            do {
+                let user = try await authService.signIn(email: self.email, password: self.password)
+                print("Successful Login: \(user)")
+            } catch {
+                self.errorMessage = error.localizedDescription
+                print("Failed to Login: \(error.localizedDescription)")
+            }
+        }
+        
+        self.isLoading.toggle()
     }
 }

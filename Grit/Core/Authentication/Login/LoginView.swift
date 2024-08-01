@@ -13,42 +13,61 @@ struct LoginView: View {
     
     var body: some View {
             VStack {
+                
                 TextField("Email", text: $viewModel.email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(DesignConstants.padding)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(DesignConstants.cornerRadius)
                     .autocapitalization(.none)
-                    .padding()
 
                 SecureField("Password", text: $viewModel.password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+                    .padding(DesignConstants.padding)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(DesignConstants.cornerRadius)
 
-//                if let errorMessage = viewModel.errorMessage {
-//                    Text(errorMessage)
-//                        .foregroundColor(.red)
-//                        .padding()
-//                }
+                if let errorMessage = viewModel.errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding()
+                }
 
-//                if viewModel.isLoading {
-//                    ProgressView()
-//                        .padding()
-//                }
+                if viewModel.isLoading {
+                    ProgressView()
+                        .padding()
+                }
+                
+                Button(action: {
+                    print("Create new account")
+                }) {
+                    Text("Don't have an account? Sign Up")
+                        .font(.callout)
+                        .foregroundStyle(Color.blue)
+                        .padding(.vertical, DesignConstants.padding)
+                }
+
 
                 Button(action: {
                     viewModel.signIn()
                 }) {
                     Text("Login")
                         .padding()
-                        .frame(width: .infinity, height: 50)
+                        .frame(height: 50)
+                        .frame(maxWidth: .infinity)
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(DesignConstants.cornerRadius)
                 }
-//                .disabled(viewModel.isLoading)
+                .disabled(viewModel.isLoading)
+                
+                Spacer()
             }
             .padding()
+            .navigationTitle("Login Page")
         }
 }
 
 #Preview {
-    LoginView()
+    NavigationStack() {
+        LoginView()
+    }
 }

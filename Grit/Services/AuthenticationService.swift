@@ -14,21 +14,24 @@ import FirebaseAuth
 
 class AuthenticationService {
     
-    func signIn(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            guard self != nil else { return }
-            
-            print(email)
-            print(password)
-            
-            if let error = error {
-                print("There was an error signing in \(error.localizedDescription)")
-            }
-            
-            if let authResult = authResult {
-                print(authResult.user.uid)
-            }
-        }
+    func signIn(email: String, password: String) async throws -> User {
+//        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+//            guard self != nil else { return }
+//            
+//            print(email)
+//            print(password)
+//            
+//            if let error = error {
+//                print("There was an error signing in \(error.localizedDescription)")
+//            }
+//            
+//            if let authResult = authResult {
+//                print(authResult.user.uid)
+//            }
+//        }
+        let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+        let user = User(user: authResult.user)
+        return user
     }
     
 }
