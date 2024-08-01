@@ -59,11 +59,7 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(
-            viewModel: ProfileViewModel(
-                firstname: dev.user.firstName,
-                profilePicture: dev.user.profilePicture ?? "",
-                workouts: dev.workouts
-            )
+            viewModel: ProfileViewModel()
         )
     }
 }

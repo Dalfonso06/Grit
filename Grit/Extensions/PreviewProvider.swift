@@ -20,18 +20,18 @@ class DeveloperPreview {
     static let instance = DeveloperPreview()
     private init() { }
     
-    let user = User(
-        id: 0,
-        username: "Dalfonso00",
-        email: "danielalfonso06@gmail.com",
-        firstName: "Daniel",
-        lastName: "Alfonso",
-        followers: 300,
-        following: 250,
-        description: "What people get wrong about motivation is that they think it's a permanent solution.",
-        profilePicture: "GritPFP",
-        createdAt: Date()
-    )
+//    let user = User(
+//        id: 0,
+//        username: "Dalfonso00",
+//        email: "danielalfonso06@gmail.com",
+//        firstName: "Daniel",
+//        lastName: "Alfonso",
+//        followers: 300,
+//        following: 250,
+//        description: "What people get wrong about motivation is that they think it's a permanent solution.",
+//        profilePicture: "GritPFP",
+//        createdAt: Date()
+//    )
     
     let workouts = [
         Workout(
