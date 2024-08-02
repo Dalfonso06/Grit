@@ -29,6 +29,8 @@
 		247BB61F2C58DC3B00EFD77F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB61E2C58DC3B00EFD77F /* LoginView.swift */; };
 		247BB6212C58DE4C00EFD77F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6202C58DE4C00EFD77F /* LoginViewModel.swift */; };
 		247BB6242C58DEC600EFD77F /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6232C58DEC600EFD77F /* AuthenticationService.swift */; };
+		247BB6272C5BB49000EFD77F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6262C5BB49000EFD77F /* SignUpViewModel.swift */; };
+		247BB6292C5BB4AD00EFD77F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6282C5BB4AD00EFD77F /* SignUpView.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
@@ -63,6 +65,8 @@
 		247BB61E2C58DC3B00EFD77F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		247BB6202C58DE4C00EFD77F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		247BB6232C58DEC600EFD77F /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		247BB6262C5BB49000EFD77F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		247BB6282C5BB4AD00EFD77F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 		247BB61C2C58DC1600EFD77F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				247BB6252C5BB47200EFD77F /* SignUp */,
 				247BB61D2C58DC2600EFD77F /* Login */,
 			);
 			path = Authentication;
@@ -246,6 +251,15 @@
 				247BB6232C58DEC600EFD77F /* AuthenticationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		247BB6252C5BB47200EFD77F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				247BB6262C5BB49000EFD77F /* SignUpViewModel.swift */,
+				247BB6282C5BB4AD00EFD77F /* SignUpView.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -416,6 +430,7 @@
 				241CB9332B5751D0008D2691 /* ContentView.swift in Sources */,
 				247B72112B7970930025061C /* RoutineModel.swift in Sources */,
 				249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */,
+				247BB6272C5BB49000EFD77F /* SignUpViewModel.swift in Sources */,
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
 				2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */,
 				247BB6212C58DE4C00EFD77F /* LoginViewModel.swift in Sources */,
@@ -435,6 +450,7 @@
 				2495CE892BCC28A600FF34DC /* MuscleGroupModel.swift in Sources */,
 				2495CE972BFD85AA00FF34DC /* ExerciseCellView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
+				247BB6292C5BB4AD00EFD77F /* SignUpView.swift in Sources */,
 				2482B7842B5F590D00A35D17 /* Color.swift in Sources */,
 				24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */,
 			);
