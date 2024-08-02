@@ -36,12 +36,10 @@ struct LoginView: View {
                         .padding()
                 }
                 
-                Button(action: {
-                    print("Create new account")
-                }) {
+                NavigationLink(destination: SignUpView()) {
                     Text("Don't have an account? Sign Up")
                         .font(.callout)
-                        .foregroundStyle(Color.blue)
+                        .foregroundColor(.blue)
                         .padding(.vertical, DesignConstants.padding)
                 }
 

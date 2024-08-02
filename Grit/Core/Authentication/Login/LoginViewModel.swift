@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class LoginViewModel: ObservableObject {
+final class LoginViewModel: ObservableObject {
     
     @Published var email: String = ""
     @Published var password: String = ""
@@ -18,8 +18,12 @@ class LoginViewModel: ObservableObject {
     
     private let authService = AuthenticationService()
     
+    private func validForm() -> Bool {
+        return !email.isEmpty && !password.isEmpty
+    }
+    
     func signIn() -> Void {
-        guard !email.isEmpty, !password.isEmpty else {
+        guard validForm() else {
             self.errorMessage = "Please input empty fields."
             return
         }
