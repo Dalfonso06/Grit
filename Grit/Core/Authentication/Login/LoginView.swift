@@ -9,7 +9,11 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject var viewModel: LoginViewModel = LoginViewModel()
+    @StateObject private var viewModel: LoginViewModel
+    
+    init(viewModel: LoginViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
             VStack {
@@ -36,7 +40,7 @@ struct LoginView: View {
                         .padding()
                 }
                 
-                NavigationLink(destination: SignUpView()) {
+                NavigationLink(destination: SignUpView(viewModel: SignUpViewModel(authService: AuthenticationService()))) {
                     Text("Don't have an account? Sign Up")
                         .font(.callout)
                         .foregroundColor(.blue)
@@ -66,6 +70,6 @@ struct LoginView: View {
 
 #Preview {
     NavigationStack() {
-        LoginView()
+        LoginView(viewModel: LoginViewModel(authService: AuthenticationService()))
     }
 }

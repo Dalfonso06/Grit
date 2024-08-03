@@ -15,8 +15,11 @@ final class SignUpViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var isLoading: Bool = false
     
-    // TODO: Utilize dependency injection
-    private let authService = AuthenticationService()
+    private let authService: AuthenticationServiceProtocol
+    
+    init(authService: AuthenticationServiceProtocol) {
+        self.authService = authService
+    }
     
     private func passwordsConfirmed() -> Bool {
         return password == passwordRepeat

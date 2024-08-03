@@ -10,7 +10,11 @@ import SwiftUI
 struct SignUpView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @StateObject var viewModel = SignUpViewModel()
+    @StateObject var viewModel: SignUpViewModel
+    
+    init(viewModel: SignUpViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         VStack {
@@ -74,6 +78,6 @@ struct SignUpView: View {
 
 #Preview {
     NavigationStack {
-        SignUpView()
+        SignUpView(viewModel: SignUpViewModel(authService: AuthenticationService()))
     }
 }

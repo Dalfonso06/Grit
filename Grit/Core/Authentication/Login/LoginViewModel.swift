@@ -16,7 +16,11 @@ final class LoginViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var user: User?
     
-    private let authService = AuthenticationService()
+    private let authService: AuthenticationServiceProtocol
+    
+    init(authService: AuthenticationServiceProtocol) {
+        self.authService = authService
+    }
     
     private func validForm() -> Bool {
         return !email.isEmpty && !password.isEmpty

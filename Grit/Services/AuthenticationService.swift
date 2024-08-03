@@ -12,7 +12,7 @@ import FirebaseAuth
 // weak self allows the method to return and stop on de-init of the service preventing memory leaks
 // authResult and error are the inputs to a completion function, that syntax is used to essentially pass in a function into the function
 
-class AuthenticationService {
+class AuthenticationService: AuthenticationServiceProtocol {
     
     func signIn(email: String, password: String) async throws -> User {
         let authResult = try await Auth.auth().signIn(withEmail: email, password: password)

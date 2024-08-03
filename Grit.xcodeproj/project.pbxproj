@@ -31,6 +31,7 @@
 		247BB6242C58DEC600EFD77F /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6232C58DEC600EFD77F /* AuthenticationService.swift */; };
 		247BB6272C5BB49000EFD77F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6262C5BB49000EFD77F /* SignUpViewModel.swift */; };
 		247BB6292C5BB4AD00EFD77F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6282C5BB4AD00EFD77F /* SignUpView.swift */; };
+		247BB62C2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
@@ -67,6 +68,7 @@
 		247BB6232C58DEC600EFD77F /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		247BB6262C5BB49000EFD77F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		247BB6282C5BB4AD00EFD77F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		241CB92F2B5751D0008D2691 /* Grit */ = {
 			isa = PBXGroup;
 			children = (
+				247BB62A2C5DB4DF00EFD77F /* Protocols */,
 				247BB6222C58DEB600EFD77F /* Services */,
 				2495CE8E2BD42BAC00FF34DC /* Constants */,
 				249181E02B61C3D40009E089 /* Concepts */,
@@ -260,6 +263,14 @@
 				247BB6282C5BB4AD00EFD77F /* SignUpView.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		247BB62A2C5DB4DF00EFD77F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -425,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
+				247BB62C2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift in Sources */,
 				247B720D2B792D3B0025061C /* WorkoutModel.swift in Sources */,
 				249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */,
 				241CB9332B5751D0008D2691 /* ContentView.swift in Sources */,
