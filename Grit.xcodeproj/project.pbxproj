@@ -32,6 +32,8 @@
 		247BB6272C5BB49000EFD77F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6262C5BB49000EFD77F /* SignUpViewModel.swift */; };
 		247BB6292C5BB4AD00EFD77F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6282C5BB4AD00EFD77F /* SignUpView.swift */; };
 		247BB62C2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */; };
+		247BB62F2C60FA8E00EFD77F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB62E2C60FA8E00EFD77F /* SettingsViewModel.swift */; };
+		247BB6312C60FA9A00EFD77F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6302C60FA9A00EFD77F /* SettingsView.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
@@ -69,6 +71,8 @@
 		247BB6262C5BB49000EFD77F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		247BB6282C5BB4AD00EFD77F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
+		247BB62E2C60FA8E00EFD77F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		247BB6302C60FA9A00EFD77F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		2466C0A92B57582600416DB6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				247BB62D2C60FA7E00EFD77F /* Settings */,
 				247BB61C2C58DC1600EFD77F /* Authentication */,
 				247B721D2B8B9CFC0025061C /* Components */,
 				2466C0B02B575B3000416DB6 /* Home */,
@@ -271,6 +276,15 @@
 				247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		247BB62D2C60FA7E00EFD77F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				247BB62E2C60FA8E00EFD77F /* SettingsViewModel.swift */,
+				247BB6302C60FA9A00EFD77F /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -453,12 +467,14 @@
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				2495CE8D2BCC2BDD00FF34DC /* TagView.swift in Sources */,
 				247BB61F2C58DC3B00EFD77F /* LoginView.swift in Sources */,
+				247BB62F2C60FA8E00EFD77F /* SettingsViewModel.swift in Sources */,
 				2495CE872BCB4F0E00FF34DC /* WorkoutCardView.swift in Sources */,
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
 				2495CE822BCB45AA00FF34DC /* ProfileHeaderView.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				2495CE942BE0667500FF34DC /* WorkoutView.swift in Sources */,
+				247BB6312C60FA9A00EFD77F /* SettingsView.swift in Sources */,
 				2495CE892BCC28A600FF34DC /* MuscleGroupModel.swift in Sources */,
 				2495CE972BFD85AA00FF34DC /* ExerciseCellView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,

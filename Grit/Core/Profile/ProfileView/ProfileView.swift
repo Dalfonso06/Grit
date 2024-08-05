@@ -26,6 +26,17 @@ struct ProfileView: View {
             }
             .background(Color("BackgroundColor"))
             .navigationTitle("Profile Page")
+            .toolbar(content: {
+                HStack {
+                    Spacer()
+                    
+                    NavigationLink(destination: {
+                        Text("Settings")
+                    }, label: {
+                        Image(systemName: "gear")
+                    })
+                }
+            })
         }
     }
     
