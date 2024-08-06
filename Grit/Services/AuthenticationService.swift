@@ -26,6 +26,10 @@ class AuthenticationService: AuthenticationServiceProtocol {
         return user
     }
     
+    func signOut() throws -> Void {
+        let authResult: () = try Auth.auth().signOut()
+    }
+    
     func deleteUser() async throws -> Bool {
         let user = Auth.auth().currentUser
         try await user?.delete()

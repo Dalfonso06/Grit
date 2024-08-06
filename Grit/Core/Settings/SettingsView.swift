@@ -17,9 +17,11 @@ struct SettingsView: View {
     
     var body: some View {
         List {
-            Button(action: {
-                viewModel.deleteUser()
-            }, label: {
+            Button (action: viewModel.signOut, label: {
+                Text("Sign Out")
+            })
+            
+            Button(action: viewModel.deleteUser, label: {
                 Text("Delete Account")
                     .foregroundStyle(Color.red)
             })

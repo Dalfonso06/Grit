@@ -34,6 +34,8 @@
 		247BB62C2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */; };
 		247BB62F2C60FA8E00EFD77F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB62E2C60FA8E00EFD77F /* SettingsViewModel.swift */; };
 		247BB6312C60FA9A00EFD77F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6302C60FA9A00EFD77F /* SettingsView.swift */; };
+		247BB6342C624A7200EFD77F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6332C624A7200EFD77F /* ForgotPasswordView.swift */; };
+		247BB6362C624A7E00EFD77F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6352C624A7E00EFD77F /* ForgotPasswordViewModel.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
@@ -73,6 +75,8 @@
 		247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
 		247BB62E2C60FA8E00EFD77F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		247BB6302C60FA9A00EFD77F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		247BB6332C624A7200EFD77F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		247BB6352C624A7E00EFD77F /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 		247BB61C2C58DC1600EFD77F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				247BB6322C624A5F00EFD77F /* ForgotPassword */,
 				247BB6252C5BB47200EFD77F /* SignUp */,
 				247BB61D2C58DC2600EFD77F /* Login */,
 			);
@@ -285,6 +290,15 @@
 				247BB6302C60FA9A00EFD77F /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		247BB6322C624A5F00EFD77F /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				247BB6332C624A7200EFD77F /* ForgotPasswordView.swift */,
+				247BB6352C624A7E00EFD77F /* ForgotPasswordViewModel.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -450,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
+				247BB6342C624A7200EFD77F /* ForgotPasswordView.swift in Sources */,
 				247BB62C2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift in Sources */,
 				247B720D2B792D3B0025061C /* WorkoutModel.swift in Sources */,
 				249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */,
@@ -460,6 +475,7 @@
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
 				2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */,
 				247BB6212C58DE4C00EFD77F /* LoginViewModel.swift in Sources */,
+				247BB6362C624A7E00EFD77F /* ForgotPasswordViewModel.swift in Sources */,
 				249181E92B63446A0009E089 /* MainColorView.swift in Sources */,
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
 				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
