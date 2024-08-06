@@ -26,8 +26,12 @@ class AuthenticationService: AuthenticationServiceProtocol {
         return user
     }
     
-    func signOut() throws -> Void {
-        let authResult: () = try Auth.auth().signOut()
+    func signOut() throws {
+        try Auth.auth().signOut()
+    }
+    
+    func resetPassword(email: String) async throws {
+        try await Auth.auth().sendPasswordReset(withEmail: email)
     }
     
     func deleteUser() async throws -> Bool {
@@ -35,4 +39,5 @@ class AuthenticationService: AuthenticationServiceProtocol {
         try await user?.delete()
         return true
     }
+    
 }

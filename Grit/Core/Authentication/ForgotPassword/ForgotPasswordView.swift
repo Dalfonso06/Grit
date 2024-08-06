@@ -16,10 +16,35 @@ struct ForgotPasswordView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            TextField("Confirm your email...", text: $viewModel.email)
+                .padding(DesignConstants.padding)
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(DesignConstants.cornerRadius)
+                .autocapitalization(.none)
+            
+            Button(action: {
+                viewModel.resetPassword()
+            }) {
+                Text("Login")
+                    .padding()
+                    .frame(height: 50)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(DesignConstants.cornerRadius)
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .navigationTitle("Confirm Email")
     }
 }
 
 #Preview {
-    ForgotPasswordView(viewModel: ForgotPasswordViewModel())
+    NavigationStack {
+        ForgotPasswordView(viewModel: ForgotPasswordViewModel(authService: AuthenticationService()))
+    }
 }

@@ -40,6 +40,13 @@ struct LoginView: View {
                         .padding()
                 }
                 
+                NavigationLink(destination: ForgotPasswordView(viewModel: ForgotPasswordViewModel(authService: AuthenticationService()))) {
+                    Text("Forgot Password?")
+                        .font(.callout)
+                        .foregroundColor(.blue)
+                        .padding(.top, DesignConstants.padding)
+                }
+                
                 NavigationLink(destination: SignUpView(viewModel: SignUpViewModel(authService: AuthenticationService()))) {
                     Text("Don't have an account? Sign Up")
                         .font(.callout)
