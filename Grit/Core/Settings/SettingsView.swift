@@ -9,12 +9,16 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @StateObject var viewModel: SettingsViewModel
     
+    init(viewModel: SettingsViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         List {
             Button(action: {
-                print("Pressed")
+                viewModel.deleteUser()
             }, label: {
                 Text("Delete Account")
                     .foregroundStyle(Color.red)
@@ -26,6 +30,6 @@ struct SettingsView: View {
 
 #Preview {
     NavigationStack {
-        SettingsView()
+        SettingsView(viewModel: SettingsViewModel(authService: AuthenticationService()))
     }
 }

@@ -45,11 +45,11 @@ final class SignUpViewModel: ObservableObject {
         
         Task {
             do {
-                let user = try await authService.signIn(email: self.email, password: self.password)
-                print("Successful Login: \(user)")
+                let user = try await authService.signUp(email: self.email, password: self.password)
+                print("Successful Sign Up: \(user)")
             } catch {
                 self.errorMessage = error.localizedDescription
-                print("Failed to Login: \(error.localizedDescription)")
+                print("Failed to Sign Up: \(error.localizedDescription)")
             }
         }
         

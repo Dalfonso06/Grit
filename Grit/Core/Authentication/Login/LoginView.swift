@@ -47,7 +47,6 @@ struct LoginView: View {
                         .padding(.vertical, DesignConstants.padding)
                 }
 
-
                 Button(action: {
                     viewModel.signIn()
                 }) {

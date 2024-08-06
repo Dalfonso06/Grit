@@ -26,4 +26,9 @@ class AuthenticationService: AuthenticationServiceProtocol {
         return user
     }
     
+    func deleteUser() async throws -> Bool {
+        let user = Auth.auth().currentUser
+        try await user?.delete()
+        return true
+    }
 }
