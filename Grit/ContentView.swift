@@ -16,31 +16,16 @@ struct ContentView: View {
     }
     
     var body: some View {
-        if (viewModel.isLoggedIn) {
-            MainView(viewModel: MainViewModel(container: viewModel.container))
-        } else {
-            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, onLoginSuccess: {
-                viewModel.updateLoginStatus()
-            }))
-        }
+        MainView(viewModel: MainViewModel(container: viewModel.container))
     }
 }
 
 class ContentViewModel: ObservableObject {
     
     @Published var container: DependencyContainer
-    @Published var isLoggedIn: Bool = false
-    
-    var authService: AuthenticationServiceProtocol {
-        container.authService
-    }
     
     init(container: DependencyContainer) {
         self.container = container
-    }
-    
-    func updateLoginStatus() -> Void {
-        self.isLoggedIn = authService.isLoggedIn()
     }
 }
 

@@ -11,14 +11,17 @@ final class SettingsViewModel: ObservableObject {
     
     private var wasDeleted: Bool = false
     private let authService: AuthenticationServiceProtocol
+    var onLogout: () -> Void
     
-    init(authService: AuthenticationServiceProtocol) {
+    init(authService: AuthenticationServiceProtocol, onLogout: @escaping () -> Void) {
         self.authService = authService
+        self.onLogout = onLogout
     }
     
     func signOut() -> Void {
         do {
             try self.authService.signOut()
+            onLogout()
             print("Successfully logged out.")
         } catch {
             print("There was an error logging out: \(error.localizedDescription)")

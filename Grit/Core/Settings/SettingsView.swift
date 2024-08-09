@@ -32,6 +32,8 @@ struct SettingsView: View {
 
 #Preview {
     NavigationStack {
-        SettingsView(viewModel: SettingsViewModel(authService: AuthenticationService()))
+        SettingsView(viewModel: SettingsViewModel(authService: AuthenticationService(), onLogout: {
+            print("Logged out")
+        }))
     }
 }

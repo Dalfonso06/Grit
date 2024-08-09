@@ -16,24 +16,32 @@ struct MainView: View {
     }
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
+        if (!viewModel.isLoggedIn) {
+            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, onLoginSuccess: {
+                viewModel.updateLoginStatus()
+            }))
+        } else {
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
 
-            ActionView()
-                .tabItem {
-                    Image(systemName: "globe")
-                    Text("Action")
-                }
+                ActionView()
+                    .tabItem {
+                        Image(systemName: "globe")
+                        Text("Action")
+                    }
 
-            ProfileView(viewModel: ProfileViewModel(container: viewModel.container))
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
+                ProfileView(viewModel: ProfileViewModel(container: viewModel.container, onLogout: {
+                    viewModel.updateLoginStatus()
+                }))
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("Profile")
+                    }
+            }
         }
     }
 }

@@ -14,8 +14,11 @@ class ProfileViewModel: ObservableObject {
     @Published var profilePicture: String = "Profile Url"
     @Published var workouts: [Workout] = []
     
-    init(container: DependencyContainer) {
+    var onLogout: () -> Void
+    
+    init(container: DependencyContainer, onLogout: @escaping () -> Void) {
         self.container = container
+        self.onLogout = onLogout
     }
     
 }
