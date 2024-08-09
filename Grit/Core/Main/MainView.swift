@@ -17,7 +17,7 @@ struct MainView: View {
     
     var body: some View {
         if (!viewModel.isLoggedIn) {
-            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, onLoginSuccess: {
+            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, updateLoginStatus: {
                 viewModel.updateLoginStatus()
             }))
         } else {
@@ -34,7 +34,7 @@ struct MainView: View {
                         Text("Action")
                     }
 
-                ProfileView(viewModel: ProfileViewModel(container: viewModel.container, onLogout: {
+                ProfileView(viewModel: ProfileViewModel(container: viewModel.container, updateLoginStatus: {
                     viewModel.updateLoginStatus()
                 }))
                     .tabItem {
@@ -47,5 +47,7 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView(viewModel: MainViewModel(container: DependencyContainer()))
+    NavigationStack {
+        MainView(viewModel: MainViewModel(container: DependencyContainer()))
+    }
 }

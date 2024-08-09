@@ -11,21 +11,21 @@ final class SettingsViewModel: ObservableObject {
     
     private var wasDeleted: Bool = false
     private let authService: AuthenticationServiceProtocol
-    var onLogout: () -> Void
+    var updateLoginStatus: () -> Void
     
-    init(authService: AuthenticationServiceProtocol, onLogout: @escaping () -> Void) {
+    init(authService: AuthenticationServiceProtocol, updateLoginStatus: @escaping () -> Void) {
         self.authService = authService
-        self.onLogout = onLogout
+        self.updateLoginStatus = updateLoginStatus
     }
     
     func signOut() -> Void {
         do {
             try self.authService.signOut()
-            onLogout()
             print("Successfully logged out.")
         } catch {
             print("There was an error logging out: \(error.localizedDescription)")
         }
+        updateLoginStatus()
     }
     
     func deleteUser() -> Void {
@@ -36,6 +36,7 @@ final class SettingsViewModel: ObservableObject {
             } catch {
                 print("There was a problem deleting your user: \(error.localizedDescription)")
             }
+            updateLoginStatus()
         }
     }
 }

@@ -29,7 +29,7 @@ final class SignUpViewModel: ObservableObject {
         return !email.isEmpty && !password.isEmpty && !passwordRepeat.isEmpty
     }
     
-    func createUser() -> Void {
+    func createUser(completion: @escaping () -> Void) -> Void {
         guard validForm() else {
             self.errorMessage = "Please input empty fields"
             return
@@ -47,6 +47,7 @@ final class SignUpViewModel: ObservableObject {
             do {
                 let user = try await authService.signUp(email: self.email, password: self.password)
                 print("Successful Sign Up: \(user)")
+                completion()
             } catch {
                 self.errorMessage = error.localizedDescription
                 print("Failed to Sign Up: \(error.localizedDescription)")

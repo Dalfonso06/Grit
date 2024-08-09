@@ -32,8 +32,8 @@ struct ProfileView: View {
                     Spacer()
                     
                     NavigationLink(destination: {
-                        SettingsView(viewModel: SettingsViewModel(authService: viewModel.container.authService, onLogout: {
-                            viewModel.onLogout()
+                        SettingsView(viewModel: SettingsViewModel(authService: viewModel.container.authService, updateLoginStatus: {
+                            viewModel.updateLoginStatus()
                         }))
                     }, label: {
                         Image(systemName: "gear")
@@ -73,9 +73,7 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(
-            viewModel: ProfileViewModel(container: DependencyContainer(), onLogout: {
-                print("Logged out")
-            })
+            viewModel: ProfileViewModel(container: DependencyContainer(), updateLoginStatus: {})
         )
     }
 }

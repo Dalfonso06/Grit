@@ -17,11 +17,11 @@ final class LoginViewModel: ObservableObject {
     @Published var user: User?
     
     private let authService: AuthenticationServiceProtocol
-    var onLoginSuccess: () -> Void?
+    var updateLoginStatus: () -> Void?
     
-    init(authService: AuthenticationServiceProtocol, onLoginSuccess: @escaping () -> Void) {
+    init(authService: AuthenticationServiceProtocol, updateLoginStatus: @escaping () -> Void) {
         self.authService = authService
-        self.onLoginSuccess = onLoginSuccess
+        self.updateLoginStatus = updateLoginStatus
     }
     
     private func validForm() -> Bool {
@@ -40,12 +40,12 @@ final class LoginViewModel: ObservableObject {
         Task {
             do {
                 let user = try await authService.signIn(email: self.email, password: self.password)
-                onLoginSuccess()
                 print("Successful Login: \(user)")
             } catch {
                 self.errorMessage = error.localizedDescription
                 print("Failed to Login: \(error.localizedDescription)")
             }
+            updateLoginStatus()
         }
         
         self.isLoading.toggle()

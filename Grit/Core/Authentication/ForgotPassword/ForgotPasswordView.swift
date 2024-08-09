@@ -10,6 +10,7 @@ import SwiftUI
 struct ForgotPasswordView: View {
     
     @StateObject private var viewModel: ForgotPasswordViewModel
+    @Environment(\.dismiss) private var dismiss
     
     init(viewModel: ForgotPasswordViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -26,7 +27,11 @@ struct ForgotPasswordView: View {
                 .padding(.vertical, DesignConstants.padding)
             
             Button(action: {
-                viewModel.resetPassword()
+                viewModel.resetPassword {
+                    DispatchQueue.main.async {
+                        dismiss()
+                    }
+                }
             }) {
                 Text("Login")
                     .padding()

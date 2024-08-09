@@ -57,7 +57,11 @@ struct SignUpView: View {
 
 
             Button(action: {
-                viewModel.createUser()
+                viewModel.createUser {
+                    DispatchQueue.main.async {
+                        dismiss()
+                    }
+                }
             }) {
                 Text("Sign Up")
                     .padding()

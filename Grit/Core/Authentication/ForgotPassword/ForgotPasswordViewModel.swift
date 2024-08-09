@@ -17,10 +17,11 @@ final class ForgotPasswordViewModel: ObservableObject {
         self.authService = authService
     }
     
-    func resetPassword() {
+    func resetPassword(completion: @escaping () -> Void) {
         Task {
             do {
                 try await self.authService.resetPassword(email: self.email)
+                completion()
             } catch {
                 print("There was an error sending reset password link: \(error.localizedDescription)")
             }
