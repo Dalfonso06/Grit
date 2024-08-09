@@ -36,6 +36,9 @@
 		247BB6312C60FA9A00EFD77F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6302C60FA9A00EFD77F /* SettingsView.swift */; };
 		247BB6342C624A7200EFD77F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6332C624A7200EFD77F /* ForgotPasswordView.swift */; };
 		247BB6362C624A7E00EFD77F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6352C624A7E00EFD77F /* ForgotPasswordViewModel.swift */; };
+		247BB6392C6394D100EFD77F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6382C6394D100EFD77F /* MainViewModel.swift */; };
+		247BB63B2C6394F400EFD77F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB63A2C6394F400EFD77F /* MainView.swift */; };
+		247BB63D2C63990600EFD77F /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB63C2C63990600EFD77F /* DependencyContainer.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
@@ -77,6 +80,9 @@
 		247BB6302C60FA9A00EFD77F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		247BB6332C624A7200EFD77F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		247BB6352C624A7E00EFD77F /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		247BB6382C6394D100EFD77F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		247BB63A2C6394F400EFD77F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		247BB63C2C63990600EFD77F /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 				2466C0A92B57582600416DB6 /* Core */,
 				2482B7822B5F58EF00A35D17 /* Extensions */,
 				2462AAA52B792CED00FBF017 /* Models */,
+				247BB63C2C63990600EFD77F /* DependencyContainer.swift */,
 				241CB9302B5751D0008D2691 /* GritApp.swift */,
 				241CB9322B5751D0008D2691 /* ContentView.swift */,
 				241CB9342B5751D4008D2691 /* Assets.xcassets */,
@@ -171,6 +178,7 @@
 		2466C0A92B57582600416DB6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				247BB6372C6394C000EFD77F /* Main */,
 				247BB62D2C60FA7E00EFD77F /* Settings */,
 				247BB61C2C58DC1600EFD77F /* Authentication */,
 				247B721D2B8B9CFC0025061C /* Components */,
@@ -299,6 +307,15 @@
 				247BB6352C624A7E00EFD77F /* ForgotPasswordViewModel.swift */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		247BB6372C6394C000EFD77F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				247BB6382C6394D100EFD77F /* MainViewModel.swift */,
+				247BB63A2C6394F400EFD77F /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		2482B7822B5F58EF00A35D17 /* Extensions */ = {
@@ -463,6 +480,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247BB6392C6394D100EFD77F /* MainViewModel.swift in Sources */,
+				247BB63B2C6394F400EFD77F /* MainView.swift in Sources */,
 				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
 				247BB6342C624A7200EFD77F /* ForgotPasswordView.swift in Sources */,
 				247BB62C2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift in Sources */,
@@ -474,6 +493,7 @@
 				247BB6272C5BB49000EFD77F /* SignUpViewModel.swift in Sources */,
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
 				2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */,
+				247BB63D2C63990600EFD77F /* DependencyContainer.swift in Sources */,
 				247BB6212C58DE4C00EFD77F /* LoginViewModel.swift in Sources */,
 				247BB6362C624A7E00EFD77F /* ForgotPasswordViewModel.swift in Sources */,
 				249181E92B63446A0009E089 /* MainColorView.swift in Sources */,

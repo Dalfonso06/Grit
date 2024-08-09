@@ -40,4 +40,8 @@ class AuthenticationService: AuthenticationServiceProtocol {
         return true
     }
     
+    func isLoggedIn() -> Bool {
+        return Auth.auth().currentUser != nil
+    }
+    
 }

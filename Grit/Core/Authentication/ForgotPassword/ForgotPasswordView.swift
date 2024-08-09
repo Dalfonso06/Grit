@@ -23,6 +23,7 @@ struct ForgotPasswordView: View {
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(DesignConstants.cornerRadius)
                 .autocapitalization(.none)
+                .padding(.vertical, DesignConstants.padding)
             
             Button(action: {
                 viewModel.resetPassword()

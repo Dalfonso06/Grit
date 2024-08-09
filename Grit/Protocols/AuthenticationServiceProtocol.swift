@@ -13,4 +13,5 @@ protocol AuthenticationServiceProtocol {
     func resetPassword(email: String) async throws
     func deleteUser() async throws -> Bool
     func signOut() throws
+    func isLoggedIn() -> Bool
 }

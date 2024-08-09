@@ -8,45 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @StateObject private var viewModel: ContentViewModel
     
-    @StateObject var viewModel: ContentViewModel
+    init(viewModel: ContentViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-
-            ActionView()
-                .tabItem {
-                    Image(systemName: "globe")
-                    Text("Action")
-                }
-
-            ProfileView(viewModel: viewModel.profileViewModel)
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
+        if (viewModel.isLoggedIn) {
+            MainView(viewModel: MainViewModel(container: viewModel.container))
+        } else {
+            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, onLoginSuccess: {
+                viewModel.updateLoginStatus()
+            }))
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(viewModel: ContentViewModel(
-            profileViewModel: ProfileViewModel()
-        ))
     }
 }
 
 class ContentViewModel: ObservableObject {
     
-    @Published var profileViewModel: ProfileViewModel
+    @Published var container: DependencyContainer
+    @Published var isLoggedIn: Bool = false
     
-    init(profileViewModel: ProfileViewModel) {
-        self.profileViewModel = profileViewModel
+    var authService: AuthenticationServiceProtocol {
+        container.authService
     }
+    
+    init(container: DependencyContainer) {
+        self.container = container
+    }
+    
+    func updateLoginStatus() -> Void {
+        self.isLoggedIn = authService.isLoggedIn()
+    }
+}
+
+#Preview {
+    ContentView(viewModel: ContentViewModel(container: DependencyContainer()))
 }

@@ -9,12 +9,13 @@ import Foundation
 
 class ProfileViewModel: ObservableObject {
     
+    @Published var container: DependencyContainer
     @Published var firstname: String = "Insert Name"
     @Published var profilePicture: String = "Profile Url"
     @Published var workouts: [Workout] = []
     
-    init() {
-        
+    init(container: DependencyContainer) {
+        self.container = container
     }
     
 }

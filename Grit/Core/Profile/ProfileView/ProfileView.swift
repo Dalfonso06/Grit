@@ -23,15 +23,16 @@ struct ProfileView: View {
                 
                 workoutList
                     .padding(.vertical, 20)
+                
             }
-            .background(Color("BackgroundColor"))
+//            .background(Color("BackgroundColor"))
             .navigationTitle("Profile Page")
             .toolbar(content: {
                 HStack {
                     Spacer()
                     
                     NavigationLink(destination: {
-                        Text("Settings")
+                        SettingsView(viewModel: SettingsViewModel(authService: viewModel.container.authService))
                     }, label: {
                         Image(systemName: "gear")
                     })
@@ -70,7 +71,7 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView(
-            viewModel: ProfileViewModel()
+            viewModel: ProfileViewModel(container: DependencyContainer())
         )
     }
 }

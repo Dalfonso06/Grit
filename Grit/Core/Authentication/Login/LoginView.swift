@@ -76,6 +76,8 @@ struct LoginView: View {
 
 #Preview {
     NavigationStack() {
-        LoginView(viewModel: LoginViewModel(authService: AuthenticationService()))
+        LoginView(viewModel: LoginViewModel(authService: AuthenticationService(), onLoginSuccess: {
+            print("Login Pressed")
+        }))
     }
 }
