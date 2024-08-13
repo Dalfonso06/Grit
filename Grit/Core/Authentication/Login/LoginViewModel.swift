@@ -16,7 +16,7 @@ final class LoginViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var user: User?
     
-    private let authService: AuthenticationServiceProtocol
+    @Published var authService: AuthenticationServiceProtocol
     var updateLoginStatus: () -> Void?
     
     init(authService: AuthenticationServiceProtocol, updateLoginStatus: @escaping () -> Void) {
