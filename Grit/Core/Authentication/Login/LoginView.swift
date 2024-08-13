@@ -17,7 +17,6 @@ struct LoginView: View {
     
     var body: some View {
             VStack {
-                
                 TextField("Email", text: $viewModel.email)
                     .padding(DesignConstants.padding)
                     .background(Color.gray.opacity(0.2))
@@ -32,11 +31,6 @@ struct LoginView: View {
                 if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)
                         .foregroundColor(.red)
-                        .padding()
-                }
-
-                if viewModel.isLoading {
-                    ProgressView()
                         .padding()
                 }
                 

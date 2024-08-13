@@ -10,6 +10,7 @@ import Foundation
 final class ForgotPasswordViewModel: ObservableObject {
     
     @Published var email: String = ""
+    @Published var isLoading: Bool = false
     
     private let authService: AuthenticationServiceProtocol
     
@@ -18,6 +19,9 @@ final class ForgotPasswordViewModel: ObservableObject {
     }
     
     func resetPassword(completion: @escaping () -> Void) {
+        
+        self.isLoading.toggle()
+        
         Task {
             do {
                 try await self.authService.resetPassword(email: self.email)
@@ -25,6 +29,7 @@ final class ForgotPasswordViewModel: ObservableObject {
             } catch {
                 print("There was an error sending reset password link: \(error.localizedDescription)")
             }
+            self.isLoading.toggle()
         }
     }
 }

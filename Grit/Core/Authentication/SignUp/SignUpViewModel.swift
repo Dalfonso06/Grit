@@ -52,8 +52,7 @@ final class SignUpViewModel: ObservableObject {
                 self.errorMessage = error.localizedDescription
                 print("Failed to Sign Up: \(error.localizedDescription)")
             }
+            self.isLoading.toggle()
         }
-        
-        self.isLoading.toggle()
     }
 }

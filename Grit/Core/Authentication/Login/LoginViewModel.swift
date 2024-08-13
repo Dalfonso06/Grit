@@ -45,9 +45,8 @@ final class LoginViewModel: ObservableObject {
                 self.errorMessage = error.localizedDescription
                 print("Failed to Login: \(error.localizedDescription)")
             }
+            self.isLoading.toggle()
             updateLoginStatus()
         }
-        
-        self.isLoading.toggle()
     }
 }

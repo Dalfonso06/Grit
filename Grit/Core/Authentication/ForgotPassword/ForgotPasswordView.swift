@@ -26,6 +26,11 @@ struct ForgotPasswordView: View {
                 .autocapitalization(.none)
                 .padding(.vertical, DesignConstants.padding)
             
+            if viewModel.isLoading {
+                ProgressView()
+                    .padding()
+            }
+            
             Button(action: {
                 viewModel.resetPassword {
                     DispatchQueue.main.async {
