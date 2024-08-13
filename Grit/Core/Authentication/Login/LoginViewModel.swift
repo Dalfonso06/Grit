@@ -45,8 +45,11 @@ final class LoginViewModel: ObservableObject {
                 self.errorMessage = error.localizedDescription
                 print("Failed to Login: \(error.localizedDescription)")
             }
-            self.isLoading.toggle()
-            updateLoginStatus()
+            
+            DispatchQueue.main.sync {
+                self.isLoading.toggle()
+                updateLoginStatus()
+            }
         }
     }
 }

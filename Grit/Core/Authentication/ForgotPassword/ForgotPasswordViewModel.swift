@@ -29,7 +29,10 @@ final class ForgotPasswordViewModel: ObservableObject {
             } catch {
                 print("There was an error sending reset password link: \(error.localizedDescription)")
             }
-            self.isLoading.toggle()
+            
+            DispatchQueue.main.async {
+                self.isLoading.toggle()
+            }
         }
     }
 }
