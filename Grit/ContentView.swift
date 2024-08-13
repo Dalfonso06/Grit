@@ -8,31 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @StateObject private var viewModel: ContentViewModel
+    
+    init(viewModel: ContentViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-
-            ActionView()
-                .tabItem {
-                    Image(systemName: "globe")
-                    Text("Action")
-                }
-
-            ProfileView(viewModel: ProfileViewModel(fullname: "Daniel Alfonso", followers: 345, following: 345))
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
+        NavigationStack {
+            MainView(viewModel: MainViewModel(container: viewModel.container))
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+class ContentViewModel: ObservableObject {
+    
+    @Published var container: DependencyContainer
+    
+    init(container: DependencyContainer) {
+        self.container = container
     }
+}
+
+#Preview {
+    ContentView(viewModel: ContentViewModel(container: DependencyContainer()))
 }

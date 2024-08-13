@@ -9,14 +9,16 @@ import Foundation
 
 class ProfileViewModel: ObservableObject {
     
-    @Published var fullname: String
-    @Published var followers: Int
-    @Published var following: Int
+    @Published var container: DependencyContainer
+    @Published var firstname: String = "Insert Name"
+    @Published var profilePicture: String = "Profile Url"
+    @Published var workouts: [Workout] = []
     
-    init(fullname: String, followers: Int, following: Int) {
-        self.fullname = fullname
-        self.followers = followers
-        self.following = following
+    var updateLoginStatus: () -> Void
+    
+    init(container: DependencyContainer, updateLoginStatus: @escaping () -> Void) {
+        self.container = container
+        self.updateLoginStatus = updateLoginStatus
     }
     
 }

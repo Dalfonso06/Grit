@@ -10,12 +10,25 @@ import Foundation
 /*
  Exercise Json:
  {
-     "id": 1,
-     "name": "Bench Press",
-     "muscle_group": "Chest",
-     "description": "Free weight barbell workout.",
-     "sets": 4,
-     "reps": [4, 6, 12, 12]
+   "Id": 1,
+   "Author": "Daniel Alfonso"
+   "Name": "Bench Press",
+   "MuscleGroup": "Chest",
+   "Description": "A compound exercise that targets the chest, shoulders, and triceps.",
+   "Reps": [
+     {
+       "MinReps": 8,
+       "MaxReps": 12
+     },
+     {
+       "MinReps": 8,
+       "MaxReps": 12
+     },
+     {
+       "MinReps": 8,
+       "MaxReps": 12
+     }
+   ]
  }
  */
 
@@ -23,14 +36,13 @@ struct Exercise: Identifiable, Codable {
     let id: Int
     let author: Int
     let name: String
-    let muscleGroup: String
+    let muscleGroup: MuscleGroupModel?
     let description: String
-    let sets: Int8
     let reps: [Int]
     
     enum CodingKeys: String, CodingKey {
         case id, author, name
         case muscleGroup = "muscle_group"
-        case description, sets, reps
+        case description, reps
     }
 }

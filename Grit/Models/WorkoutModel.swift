@@ -13,14 +13,13 @@ import Foundation
     "id": 2,
     "name": "High volume chest workout"
     "description": "Killer chest workout",
-    "category": "Push",
+    "tags": ["Push", "Chest", "Triceps"]
     "exercises": [
         {
             "id": 1,
             "name": "Bench Press",
             "muscle_group": "Chest",
             "description": "Free weight barbell workout.",
-            "sets": 4,
             "reps": [4, 6, 12, 12]
         },
         {
@@ -28,7 +27,6 @@ import Foundation
             "name": "Incline Dumbell Press",
             "muscle_group": "Upper Chest",
             "description": "Incline dumbell bench press.",
-            "sets": 4,
             "reps": [6, 6, 6, 6]
         }
     ]
@@ -40,11 +38,11 @@ struct Workout: Identifiable, Codable {
     let author: Int
     let name: String
     let description: String
-    let category: String
+    let tags: [String]
     let exercises: [Exercise]
     
     enum CodingKeys: String, CodingKey {
-        case id, author, name, description, category
-        case exercises
+        case id, author, name, description
+        case tags, exercises
     }
 }
