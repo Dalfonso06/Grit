@@ -18,21 +18,23 @@ final class SettingsViewModel: ObservableObject {
         self.updateLoginStatus = updateLoginStatus
     }
     
-    func signOut() -> Void {
+    func signOut(completion: @escaping () -> Void) -> Void {
         do {
             try self.authService.signOut()
             print("Successfully logged out.")
+            completion()
         } catch {
             print("There was an error logging out: \(error.localizedDescription)")
         }
         updateLoginStatus()
     }
     
-    func deleteUser() -> Void {
+    func deleteUser(completion: @escaping () -> Void) -> Void {
         Task {
             do {
                 self.wasDeleted = try await self.authService.deleteUser()
                 print("Successfully deleted.")
+                completion()
             } catch {
                 print("There was a problem deleting your user: \(error.localizedDescription)")
             }

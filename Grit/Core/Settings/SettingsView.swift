@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     
     @StateObject var viewModel: SettingsViewModel
+    @Environment(\.dismiss) private var dismiss
     
     init(viewModel: SettingsViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -17,11 +18,23 @@ struct SettingsView: View {
     
     var body: some View {
         List {
-            Button (action: viewModel.signOut, label: {
+            Button (action: {
+                viewModel.signOut {
+                    DispatchQueue.main.async {
+                        dismiss()
+                    }
+                }
+            }, label: {
                 Text("Sign Out")
             })
             
-            Button(action: viewModel.deleteUser, label: {
+            Button(action: {
+                viewModel.deleteUser {
+                    DispatchQueue.main.async {
+                        dismiss()
+                    }
+                }
+            }, label: {
                 Text("Delete Account")
                     .foregroundStyle(Color.red)
             })

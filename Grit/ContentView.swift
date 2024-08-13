@@ -16,7 +16,9 @@ struct ContentView: View {
     }
     
     var body: some View {
-        MainView(viewModel: MainViewModel(container: viewModel.container))
+        NavigationStack {
+            MainView(viewModel: MainViewModel(container: viewModel.container))
+        }
     }
 }
 

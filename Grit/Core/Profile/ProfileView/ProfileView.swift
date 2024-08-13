@@ -18,7 +18,6 @@ struct ProfileView: View {
                     firstname: viewModel.firstname,
                     profilePicture: viewModel.profilePicture
                 )
-                .frame(width: .infinity)
                 .padding(.vertical)
                 
                 workoutList
