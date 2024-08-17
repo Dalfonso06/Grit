@@ -9,12 +9,17 @@ import Foundation
 
 final class DependencyContainer {
     let authService: AuthenticationServiceProtocol
+    let userService: UserServiceProtocol
     
-    init(authService: AuthenticationServiceProtocol) {
+    init(authService: AuthenticationServiceProtocol, userService: UserServiceProtocol) {
         self.authService = authService
+        self.userService = userService
     }
     
     convenience init() {
-        self.init(authService: AuthenticationService())
+        self.init(
+            authService: AuthenticationService(),
+            userService: UserService()
+        )
     }
 }
