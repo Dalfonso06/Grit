@@ -15,6 +15,7 @@ import FirebaseAuth
 //   "email": "john.doe@example.com",
 //   "first_name": "John",
 //   "last_name": "Doe",
+//   "birth_date":  "2000-05-06T00:00:00",
 //   "followers": 54,
 //   "following": 27,
 //   "profile_picture": "https://example.com/user/123/avatar.jpg",

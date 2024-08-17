@@ -12,9 +12,8 @@ final class MainViewModel: ObservableObject {
     @Published var container: DependencyContainer
     @Published var isLoggedIn: Bool = false
     
-    var authService: AuthenticationServiceProtocol {
-        container.authService
-    }
+    var authService: AuthenticationServiceProtocol { container.authService }
+    var userService: UserServiceProtocol { container.userService }
     
     init(container: DependencyContainer) {
         self.container = container

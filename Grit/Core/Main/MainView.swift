@@ -17,7 +17,7 @@ struct MainView: View {
     
     var body: some View {
         if (!viewModel.isLoggedIn) {
-            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, updateLoginStatus: {
+            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, userService: viewModel.userService, updateLoginStatus: {
                 viewModel.updateLoginStatus()
             }))
         } else {

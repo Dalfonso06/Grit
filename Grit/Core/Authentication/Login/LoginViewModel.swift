@@ -17,10 +17,16 @@ final class LoginViewModel: ObservableObject {
     @Published var user: User?
     
     @Published var authService: AuthenticationServiceProtocol
+    @Published var userService: UserServiceProtocol
     var updateLoginStatus: () -> Void?
     
-    init(authService: AuthenticationServiceProtocol, updateLoginStatus: @escaping () -> Void) {
+    init(
+        authService: AuthenticationServiceProtocol,
+        userService: UserServiceProtocol,
+        updateLoginStatus: @escaping () -> Void
+    ) {
         self.authService = authService
+        self.userService = userService
         self.updateLoginStatus = updateLoginStatus
     }
     
@@ -40,6 +46,7 @@ final class LoginViewModel: ObservableObject {
         Task {
             do {
                 let user = try await authService.signIn(email: self.email, password: self.password)
+                try await userService.getUserData(uid: user.uid)
                 print("Successful Login: \(user)")
             } catch {
                 self.errorMessage = error.localizedDescription

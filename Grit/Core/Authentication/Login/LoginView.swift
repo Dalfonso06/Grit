@@ -70,8 +70,11 @@ struct LoginView: View {
 
 #Preview {
     NavigationStack() {
-        LoginView(viewModel: LoginViewModel(authService: AuthenticationService(), updateLoginStatus: {
-            print("Login Pressed")
+        LoginView(viewModel: LoginViewModel(
+            authService: AuthenticationService(),
+            userService: UserService(),
+            updateLoginStatus: {
+                print("Login Pressed")
         }))
     }
 }

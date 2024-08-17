@@ -39,6 +39,8 @@
 		247BB6392C6394D100EFD77F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6382C6394D100EFD77F /* MainViewModel.swift */; };
 		247BB63B2C6394F400EFD77F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB63A2C6394F400EFD77F /* MainView.swift */; };
 		247BB63D2C63990600EFD77F /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB63C2C63990600EFD77F /* DependencyContainer.swift */; };
+		247BB63F2C6E2DF900EFD77F /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB63E2C6E2DF900EFD77F /* UserServiceProtocol.swift */; };
+		247BB6412C6E2E2900EFD77F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB6402C6E2E2900EFD77F /* UserService.swift */; };
 		2482B7842B5F590D00A35D17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482B7832B5F590D00A35D17 /* Color.swift */; };
 		249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E32B61C3FF0009E089 /* ColorPaletteView.swift */; };
 		249181E72B6344050009E089 /* PaletteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249181E62B6344050009E089 /* PaletteCardView.swift */; };
@@ -83,6 +85,8 @@
 		247BB6382C6394D100EFD77F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		247BB63A2C6394F400EFD77F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		247BB63C2C63990600EFD77F /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		247BB63E2C6E2DF900EFD77F /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
+		247BB6402C6E2E2900EFD77F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		2482B7832B5F590D00A35D17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		249181E32B61C3FF0009E089 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		249181E62B6344050009E089 /* PaletteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteCardView.swift; sourceTree = "<group>"; };
@@ -270,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				247BB6232C58DEC600EFD77F /* AuthenticationService.swift */,
+				247BB6402C6E2E2900EFD77F /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				247BB62B2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift */,
+				247BB63E2C6E2DF900EFD77F /* UserServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 				247BB6362C624A7E00EFD77F /* ForgotPasswordViewModel.swift in Sources */,
 				249181E92B63446A0009E089 /* MainColorView.swift in Sources */,
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
+				247BB63F2C6E2DF900EFD77F /* UserServiceProtocol.swift in Sources */,
 				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
 				247BB6242C58DEC600EFD77F /* AuthenticationService.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
@@ -511,6 +518,7 @@
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				2495CE942BE0667500FF34DC /* WorkoutView.swift in Sources */,
 				247BB6312C60FA9A00EFD77F /* SettingsView.swift in Sources */,
+				247BB6412C6E2E2900EFD77F /* UserService.swift in Sources */,
 				2495CE892BCC28A600FF34DC /* MuscleGroupModel.swift in Sources */,
 				2495CE972BFD85AA00FF34DC /* ExerciseCellView.swift in Sources */,
 				247B72192B8818380025061C /* UserModel.swift in Sources */,
