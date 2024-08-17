@@ -45,8 +45,8 @@ final class SignUpViewModel: ObservableObject {
         
         Task {
             do {
-                let user = try await authService.signUp(email: self.email, password: self.password)
-                print("Successful Sign Up: \(user)")
+                let uid = try await authService.signUp(email: self.email, password: self.password)
+                print("Successful Sign Up: \(uid)")
                 
                 DispatchQueue.main.async {
                     completion()

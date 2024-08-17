@@ -45,9 +45,9 @@ final class LoginViewModel: ObservableObject {
         
         Task {
             do {
-                let user = try await authService.signIn(email: self.email, password: self.password)
-                try await userService.getUserData(uid: user.uid)
-                print("Successful Login: \(user)")
+                let uid = try await authService.signIn(email: self.email, password: self.password)
+                self.user = try await userService.getUserData(uid: uid)
+                print("Successful Login: \(String(describing: user))")
             } catch {
                 self.errorMessage = error.localizedDescription
                 print("Failed to Login: \(error.localizedDescription)")

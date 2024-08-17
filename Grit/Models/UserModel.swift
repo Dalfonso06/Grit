@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
 
 // User Profile Json:
 // {
@@ -26,10 +27,18 @@ struct User {
     let uid: String
     let email: String?
     let photoUrl: String?
+    let firstName: String?
+    let lastName: String?
+    let followers: Int?
+    let following: Int?
     
-    init(user: FirebaseAuth.User) {
-        self.uid = user.uid
-        self.email = user.email
-        self.photoUrl = user.photoURL?.absoluteString
+    init(uid: String, document: DocumentSnapshot) {
+        self.uid = uid
+        self.email = document.get("email") as? String
+        self.photoUrl = document.get("profilePictureUrl") as? String
+        self.firstName = document.get("firstName") as? String
+        self.lastName = document.get("lastName") as? String
+        self.followers = document.get("followers") as? Int
+        self.following = document.get("following") as? Int
     }
 }

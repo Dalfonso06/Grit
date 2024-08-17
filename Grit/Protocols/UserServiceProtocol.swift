@@ -9,5 +9,5 @@ import Foundation
 import Firebase
 
 protocol UserServiceProtocol {
-    func getUserData(uid: String) async throws -> DocumentSnapshot
+    func getUserData(uid: String) async throws -> User
 }

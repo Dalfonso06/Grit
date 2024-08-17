@@ -14,16 +14,16 @@ import FirebaseAuth
 
 class AuthenticationService: AuthenticationServiceProtocol {
     
-    func signIn(email: String, password: String) async throws -> User {
+    func signIn(email: String, password: String) async throws -> String {
         let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
-        let user = User(user: authResult.user)
-        return user
+        let uid = authResult.user.uid
+        return uid
     }
     
-    func signUp(email: String, password: String) async throws -> User {
+    func signUp(email: String, password: String) async throws -> String {
         let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
-        let user = User(user: authResult.user)
-        return user
+        let uid = authResult.user.uid
+        return uid
     }
     
     func signOut() throws {

@@ -8,8 +8,8 @@
 import Foundation
 
 protocol AuthenticationServiceProtocol {
-    func signIn(email: String, password: String) async throws -> User
-    func signUp(email: String, password: String) async throws -> User
+    func signIn(email: String, password: String) async throws -> String
+    func signUp(email: String, password: String) async throws -> String
     func resetPassword(email: String) async throws
     func deleteUser() async throws -> Bool
     func signOut() throws
