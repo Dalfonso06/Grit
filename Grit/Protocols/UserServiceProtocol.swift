@@ -10,4 +10,5 @@ import Firebase
 
 protocol UserServiceProtocol {
     func getUserData(uid: String) async throws -> User
+    func getUserProfileImage(url: String) async throws -> Data
 }
