@@ -47,10 +47,12 @@ struct ProfileHeaderView: View {
 }
 
 #Preview {
-    ZStack {
+    let user = DeveloperPreview().user
+    
+    return ZStack {
         Color("BackgroundColor")
             .ignoresSafeArea()
         
-        ProfileHeaderView(firstname: "Daniel", profilePicture: "GritPFP")
+        ProfileHeaderView(firstname: user.firstName!, profilePicture: user.photoUrl!)
     }
 }

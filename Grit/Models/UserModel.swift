@@ -41,4 +41,14 @@ struct User {
         self.followers = document.get("followers") as? Int
         self.following = document.get("following") as? Int
     }
+    
+    init(uid: String, email: String?, photoUrl: String?, firstName: String?, lastName: String?, followers: Int?, following: Int?) {
+        self.uid = uid
+        self.email = email
+        self.photoUrl = photoUrl
+        self.firstName = firstName
+        self.lastName = lastName
+        self.followers = followers
+        self.following = following
+    }
 }

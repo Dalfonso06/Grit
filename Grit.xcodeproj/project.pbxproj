@@ -14,6 +14,7 @@
 		2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B42B575B7700416DB6 /* ProfileView.swift */; };
 		2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B62B575B8600416DB6 /* ActionView.swift */; };
 		2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B92B575B9C00416DB6 /* HomeView.swift */; };
+		246AA27A2C7264160022F72E /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AA2792C7264160022F72E /* ProfileHeaderViewModel.swift */; };
 		247B720D2B792D3B0025061C /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B720C2B792D3B0025061C /* WorkoutModel.swift */; };
 		247B720F2B796D500025061C /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B720E2B796D500025061C /* ExerciseModel.swift */; };
 		247B72112B7970930025061C /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B72102B7970930025061C /* RoutineModel.swift */; };
@@ -67,6 +68,7 @@
 		2466C0B42B575B7700416DB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2466C0B62B575B8600416DB6 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		2466C0B92B575B9C00416DB6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		246AA2792C7264160022F72E /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		247B720C2B792D3B0025061C /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		247B720E2B796D500025061C /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
 		247B72102B7970930025061C /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				2495CE812BCB45AA00FF34DC /* ProfileHeaderView.swift */,
+				246AA2792C7264160022F72E /* ProfileHeaderViewModel.swift */,
 			);
 			path = ProfileHeader;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
 				247BB6342C624A7200EFD77F /* ForgotPasswordView.swift in Sources */,
 				247BB62C2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift in Sources */,
+				246AA27A2C7264160022F72E /* ProfileHeaderViewModel.swift in Sources */,
 				247B720D2B792D3B0025061C /* WorkoutModel.swift in Sources */,
 				249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */,
 				241CB9332B5751D0008D2691 /* ContentView.swift in Sources */,

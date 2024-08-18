@@ -10,14 +10,18 @@ import Foundation
 class ProfileViewModel: ObservableObject {
     
     @Published var container: DependencyContainer
-    @Published var firstname: String = "Insert Name"
-    @Published var profilePicture: String = "Profile Url"
+    @Published var user: User
     @Published var workouts: [Workout] = []
     
     var updateLoginStatus: () -> Void
     
-    init(container: DependencyContainer, updateLoginStatus: @escaping () -> Void) {
+    var userService: UserServiceProtocol {
+        container.userService
+    }
+    
+    init(container: DependencyContainer, user: User, updateLoginStatus: @escaping () -> Void) {
         self.container = container
+        self.user = user
         self.updateLoginStatus = updateLoginStatus
     }
     

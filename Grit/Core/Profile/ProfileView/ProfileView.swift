@@ -15,8 +15,8 @@ struct ProfileView: View {
         NavigationView {
             ScrollView {
                 ProfileHeaderView(
-                    firstname: viewModel.firstname,
-                    profilePicture: viewModel.profilePicture
+                    firstname: viewModel.user.firstName ?? "",
+                    profilePicture: viewModel.user.photoUrl ?? ""
                 )
                 .padding(.vertical)
                 
@@ -69,10 +69,13 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView(
-            viewModel: ProfileViewModel(container: DependencyContainer(), updateLoginStatus: {})
-        )
+#Preview {
+    let container = DependencyContainer()
+    let user = DeveloperPreview().user
+    
+    return NavigationStack {
+        ProfileView(viewModel: ProfileViewModel(container: container, user: user, updateLoginStatus: {
+            print("Action")
+        }))
     }
 }

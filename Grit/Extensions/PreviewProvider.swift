@@ -18,20 +18,17 @@ extension PreviewProvider {
 class DeveloperPreview {
     
     static let instance = DeveloperPreview()
-    private init() { }
+    init() { }
     
-//    let user = User(
-//        id: 0,
-//        username: "Dalfonso00",
-//        email: "danielalfonso06@gmail.com",
-//        firstName: "Daniel",
-//        lastName: "Alfonso",
-//        followers: 300,
-//        following: 250,
-//        description: "What people get wrong about motivation is that they think it's a permanent solution.",
-//        profilePicture: "GritPFP",
-//        createdAt: Date()
-//    )
+    let user = User(
+        uid: "DCwazk7fE1fAOF1GpHm2rhExF9X2",
+        email: "danielalfonso06@gmail.com",
+        photoUrl: "gs://grit-2f1f1.appspot.com/IMG_0387.jpeg",
+        firstName: "Daniel",
+        lastName: "Alfonso",
+        followers: 0,
+        following: 0
+    )
     
     let workouts = [
         Workout(

@@ -61,6 +61,11 @@ struct LoginView: View {
                 }
                 .disabled(viewModel.isLoading)
                 
+                if (viewModel.isLoading) {
+                    ProgressView()
+                        .padding()
+                }
+                
                 Spacer()
             }
             .padding()
@@ -73,6 +78,7 @@ struct LoginView: View {
         LoginView(viewModel: LoginViewModel(
             authService: AuthenticationService(),
             userService: UserService(),
+            mainViewModel: MainViewModel(container: DependencyContainer()),
             updateLoginStatus: {
                 print("Login Pressed")
         }))
