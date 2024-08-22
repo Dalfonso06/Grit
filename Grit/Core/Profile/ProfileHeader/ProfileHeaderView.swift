@@ -9,24 +9,31 @@ import SwiftUI
 
 struct ProfileHeaderView: View {
     
-    @State var firstname: String
-    @State var profilePicture: String
+    @StateObject private var viewModel: ProfileHeaderViewModel
+    
+    init(viewModel: ProfileHeaderViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         VStack {
             HStack {
-                Image(profilePicture)
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .clipShape(
-                        RoundedRectangle(cornerRadius: DesignConstants.cornerRadius)
-                    )
+                
+                if let imageData = viewModel.imageData, let uiImage = UIImage(data: viewModel.imageData!) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
+                } else {
+                    ProgressView()
+                        .frame(width: 120, height: 120)
+                }
                 
                 
                 Spacer()
                 
                 VStack(alignment: .leading) {
-                    Text("Hello \(firstname)")
+                    Text("Hello \(viewModel.firstName)")
                         .foregroundColor(.gray)
                         .fontWeight(.semibold)
                     
@@ -43,6 +50,9 @@ struct ProfileHeaderView: View {
         .background()
         .cornerRadius(DesignConstants.cornerRadius)
         .padding(DesignConstants.padding)
+        .onAppear {
+            viewModel.getProfileImage()
+        }
     }
 }
 
@@ -53,6 +63,6 @@ struct ProfileHeaderView: View {
         Color("BackgroundColor")
             .ignoresSafeArea()
         
-        ProfileHeaderView(firstname: user.firstName!, profilePicture: user.photoUrl!)
+        ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService(), firstName: user.firstName!, profileUrl: user.photoUrl!))
     }
 }

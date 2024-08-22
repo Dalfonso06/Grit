@@ -15,8 +15,7 @@ struct ProfileView: View {
         NavigationView {
             ScrollView {
                 ProfileHeaderView(
-                    firstname: viewModel.user.firstName ?? "",
-                    profilePicture: viewModel.user.photoUrl ?? ""
+                    viewModel: ProfileHeaderViewModel(userService: viewModel.userService, firstName: viewModel.user.firstName ?? "Name Error", profileUrl: viewModel.user.photoUrl ?? "")
                 )
                 .padding(.vertical)
                 
