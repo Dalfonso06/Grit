@@ -16,11 +16,7 @@ struct MainView: View {
     }
     
     var body: some View {
-        if (!viewModel.isLoggedIn && viewModel.user != nil) {
-            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, userService: viewModel.userService, mainViewModel: viewModel, updateLoginStatus: {
-                viewModel.updateLoginStatus()
-            }))
-        } else {
+        if let user = viewModel.user, viewModel.isLoggedIn {
             TabView {
                 HomeView()
                     .tabItem {
@@ -34,14 +30,19 @@ struct MainView: View {
                         Text("Action")
                     }
 
-                ProfileView(viewModel: ProfileViewModel(container: viewModel.container, user: viewModel.user!, updateLoginStatus: {
+                
+                ProfileView(viewModel: ProfileViewModel(container: viewModel.container, user: user, updateLoginStatus: {
                     viewModel.updateLoginStatus()
                 }))
-                    .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("Profile")
-                    }
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Profile")
+                }
             }
+        } else {
+            LoginView(viewModel: LoginViewModel(authService: viewModel.authService, userService: viewModel.userService, mainViewModel: viewModel, updateLoginStatus: {
+                viewModel.updateLoginStatus()
+            }))
         }
     }
 }

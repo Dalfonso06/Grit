@@ -19,9 +19,10 @@ struct ProfileHeaderView: View {
         VStack {
             HStack {
                 
-                if let imageData = viewModel.imageData, let uiImage = UIImage(data: viewModel.imageData!) {
+                if let _ = viewModel.imageData, let uiImage = UIImage(data: viewModel.imageData!) {
                     Image(uiImage: uiImage)
                         .resizable()
+                        .scaledToFill()
                         .frame(width: 120, height: 120)
                         .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
                 } else {
@@ -60,9 +61,6 @@ struct ProfileHeaderView: View {
     let user = DeveloperPreview().user
     
     return ZStack {
-        Color("BackgroundColor")
-            .ignoresSafeArea()
-        
         ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService(), firstName: user.firstName!, profileUrl: user.photoUrl!))
     }
 }
