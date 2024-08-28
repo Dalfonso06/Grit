@@ -27,7 +27,8 @@ class DeveloperPreview {
         firstName: "Daniel",
         lastName: "Alfonso",
         followers: 0,
-        following: 0
+        following: 0,
+        photoData: UIImage(named: "GritPFP")?.jpegData(compressionQuality: 1.0)
     )
     
     let workouts = [

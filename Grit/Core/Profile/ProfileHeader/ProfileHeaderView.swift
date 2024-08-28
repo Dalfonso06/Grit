@@ -26,8 +26,11 @@ struct ProfileHeaderView: View {
                         .frame(width: 120, height: 120)
                         .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
                 } else {
-                    ProgressView()
+                    Image(uiImage: UIImage(named: "DefaultPFP")!)
+                        .resizable()
+                        .scaledToFill()
                         .frame(width: 120, height: 120)
+                        .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
                 }
                 
                 
@@ -51,9 +54,6 @@ struct ProfileHeaderView: View {
         .background()
         .cornerRadius(DesignConstants.cornerRadius)
         .padding(DesignConstants.padding)
-        .onAppear {
-            viewModel.getProfileImage()
-        }
     }
 }
 
@@ -61,6 +61,6 @@ struct ProfileHeaderView: View {
     let user = DeveloperPreview().user
     
     return ZStack {
-        ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService(), firstName: user.firstName!, profileUrl: user.photoUrl!))
+        ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService(), firstName: user.firstName!, imageData: user.photoData))
     }
 }

@@ -19,7 +19,8 @@ class UserService: UserServiceProtocol {
         let db = Firestore.firestore()
         let documentRef = db.collection("Users").document(uid)
         let document = try await documentRef.getDocument()
-        return User(uid: uid, document: document)
+        let photoData = try await self.getUserProfileImage(url: document.get("profilePictureUrl") as! String)
+        return User(uid: uid, document: document, photoData: photoData)
     }
     
     func getUserProfileImage(url: String) async throws -> Data {

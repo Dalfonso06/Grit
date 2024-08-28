@@ -15,7 +15,11 @@ struct ProfileView: View {
         NavigationView {
             ScrollView {
                 ProfileHeaderView(
-                    viewModel: ProfileHeaderViewModel(userService: viewModel.userService, firstName: viewModel.user.firstName ?? "Name Error", profileUrl: viewModel.user.photoUrl ?? "")
+                    viewModel: ProfileHeaderViewModel(
+                        userService: viewModel.userService,
+                        firstName: viewModel.user.firstName ?? "Name Error",
+                        imageData: viewModel.user.photoData
+                    )
                 )
                 .padding(.vertical)
                 
@@ -23,7 +27,6 @@ struct ProfileView: View {
                     .padding(.vertical, 20)
                 
             }
-//            .background(Color("BackgroundColor"))
             .navigationTitle("Profile Page")
             .toolbar(content: {
                 HStack {

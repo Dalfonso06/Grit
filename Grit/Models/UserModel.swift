@@ -27,12 +27,13 @@ struct User {
     let uid: String
     let email: String?
     let photoUrl: String?
+    let photoData: Data?
     let firstName: String?
     let lastName: String?
     let followers: Int?
     let following: Int?
     
-    init(uid: String, document: DocumentSnapshot) {
+    init(uid: String, document: DocumentSnapshot, photoData: Data?) {
         self.uid = uid
         self.email = document.get("email") as? String
         self.photoUrl = document.get("profilePictureUrl") as? String
@@ -40,9 +41,10 @@ struct User {
         self.lastName = document.get("lastName") as? String
         self.followers = document.get("followers") as? Int
         self.following = document.get("following") as? Int
+        self.photoData = photoData
     }
     
-    init(uid: String, email: String?, photoUrl: String?, firstName: String?, lastName: String?, followers: Int?, following: Int?) {
+    init(uid: String, email: String?, photoUrl: String?, firstName: String?, lastName: String?, followers: Int?, following: Int?, photoData: Data?) {
         self.uid = uid
         self.email = email
         self.photoUrl = photoUrl
@@ -50,5 +52,6 @@ struct User {
         self.lastName = lastName
         self.followers = followers
         self.following = following
+        self.photoData = photoData
     }
 }
