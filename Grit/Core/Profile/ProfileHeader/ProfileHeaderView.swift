@@ -16,9 +16,8 @@ struct ProfileHeaderView: View {
     }
     
     var body: some View {
-        VStack {
+        ZStack(alignment: .topTrailing) {
             HStack {
-                
                 if let _ = viewModel.imageData, let uiImage = UIImage(data: viewModel.imageData!) {
                     Image(uiImage: uiImage)
                         .resizable()
@@ -32,7 +31,6 @@ struct ProfileHeaderView: View {
                         .frame(width: 120, height: 120)
                         .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
                 }
-                
                 
                 Spacer()
                 
@@ -48,10 +46,19 @@ struct ProfileHeaderView: View {
                 
                 Spacer()
             }
+            
+            Button(action: {
+                print("Pressed")
+            }, label: {
+                Image(systemName: "ellipsis")
+                    .foregroundStyle(Color.gray)
+                    .padding(5)
+                    .font(.title)
+            })
+            
         }
         .frame(maxWidth: .infinity)
         .padding(DesignConstants.padding)
-        .background()
         .cornerRadius(DesignConstants.cornerRadius)
         .padding(DesignConstants.padding)
     }

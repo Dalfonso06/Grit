@@ -12,36 +12,34 @@ struct ProfileView: View {
     @StateObject var viewModel: ProfileViewModel
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                ProfileHeaderView(
-                    viewModel: ProfileHeaderViewModel(
-                        userService: viewModel.userService,
-                        firstName: viewModel.user.firstName ?? "Name Error",
-                        imageData: viewModel.user.photoData
-                    )
+        ScrollView {
+            ProfileHeaderView(
+                viewModel: ProfileHeaderViewModel(
+                    userService: viewModel.userService,
+                    firstName: viewModel.user.firstName ?? "Name Error",
+                    imageData: viewModel.user.photoData
                 )
-                .padding(.vertical)
-                
-                workoutList
-                    .padding(.vertical, 20)
-                
-            }
-            .navigationTitle("Profile Page")
-            .toolbar(content: {
-                HStack {
-                    Spacer()
-                    
-                    NavigationLink(destination: {
-                        SettingsView(viewModel: SettingsViewModel(authService: viewModel.container.authService, updateLoginStatus: {
-                            viewModel.updateLoginStatus()
-                        }))
-                    }, label: {
-                        Image(systemName: "gear")
-                    })
-                }
-            })
+            )
+            .padding(.vertical)
+            
+            workoutList
+                .padding(.vertical, 20)
+            
         }
+        .navigationTitle("Profile Page")
+        .toolbar(content: {
+            HStack {
+                Spacer()
+                
+                NavigationLink(destination: {
+                    SettingsView(viewModel: SettingsViewModel(authService: viewModel.container.authService, updateLoginStatus: {
+                        viewModel.updateLoginStatus()
+                    }))
+                }, label: {
+                    Image(systemName: "gear")
+                })
+            }
+        })
     }
     
     var workoutList: some View {

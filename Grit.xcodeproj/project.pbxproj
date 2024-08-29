@@ -11,6 +11,8 @@
 		241CB9332B5751D0008D2691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB9322B5751D0008D2691 /* ContentView.swift */; };
 		241CB9352B5751D4008D2691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241CB9342B5751D4008D2691 /* Assets.xcassets */; };
 		241CB9382B5751D4008D2691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241CB9372B5751D4008D2691 /* Preview Assets.xcassets */; };
+		242B04CD2C80A3C800B25166 /* ProfileHeaderSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242B04CC2C80A3C800B25166 /* ProfileHeaderSheetView.swift */; };
+		242B04CF2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242B04CE2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift */; };
 		2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B42B575B7700416DB6 /* ProfileView.swift */; };
 		2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B62B575B8600416DB6 /* ActionView.swift */; };
 		2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B92B575B9C00416DB6 /* HomeView.swift */; };
@@ -65,6 +67,8 @@
 		241CB9322B5751D0008D2691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		241CB9342B5751D4008D2691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241CB9372B5751D4008D2691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		242B04CC2C80A3C800B25166 /* ProfileHeaderSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderSheetView.swift; sourceTree = "<group>"; };
+		242B04CE2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderSheetViewModel.swift; sourceTree = "<group>"; };
 		2466C0B42B575B7700416DB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2466C0B62B575B8600416DB6 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		2466C0B92B575B9C00416DB6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -358,8 +362,10 @@
 		2495CE7E2BCB456C00FF34DC /* ProfileHeader */ = {
 			isa = PBXGroup;
 			children = (
-				2495CE812BCB45AA00FF34DC /* ProfileHeaderView.swift */,
+				242B04CE2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift */,
 				246AA2792C7264160022F72E /* ProfileHeaderViewModel.swift */,
+				242B04CC2C80A3C800B25166 /* ProfileHeaderSheetView.swift */,
+				2495CE812BCB45AA00FF34DC /* ProfileHeaderView.swift */,
 			);
 			path = ProfileHeader;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				246AA27A2C7264160022F72E /* ProfileHeaderViewModel.swift in Sources */,
 				247B720D2B792D3B0025061C /* WorkoutModel.swift in Sources */,
 				249181EB2B65972A0009E089 /* AlertColorView.swift in Sources */,
+				242B04CD2C80A3C800B25166 /* ProfileHeaderSheetView.swift in Sources */,
 				241CB9332B5751D0008D2691 /* ContentView.swift in Sources */,
 				247B72112B7970930025061C /* RoutineModel.swift in Sources */,
 				249181E42B61C3FF0009E089 /* ColorPaletteView.swift in Sources */,
@@ -519,6 +526,7 @@
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
 				2495CE822BCB45AA00FF34DC /* ProfileHeaderView.swift in Sources */,
+				242B04CF2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				2495CE942BE0667500FF34DC /* WorkoutView.swift in Sources */,
 				247BB6312C60FA9A00EFD77F /* SettingsView.swift in Sources */,
