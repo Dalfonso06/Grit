@@ -16,8 +16,7 @@ struct ProfileView: View {
             ProfileHeaderView(
                 viewModel: ProfileHeaderViewModel(
                     userService: viewModel.userService,
-                    firstName: viewModel.user.firstName ?? "Name Error",
-                    imageData: viewModel.user.photoData
+                    user: viewModel.user
                 )
             )
             .padding(.vertical)

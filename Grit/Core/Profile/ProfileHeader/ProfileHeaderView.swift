@@ -18,7 +18,7 @@ struct ProfileHeaderView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             HStack {
-                if let _ = viewModel.imageData, let uiImage = UIImage(data: viewModel.imageData!) {
+                if let _ = viewModel.user.photoData, let uiImage = UIImage(data: viewModel.user.photoData!) {
                     Image(uiImage: uiImage)
                         .resizable()
                         .scaledToFill()
@@ -35,7 +35,7 @@ struct ProfileHeaderView: View {
                 Spacer()
                 
                 VStack(alignment: .leading) {
-                    Text("Hello \(viewModel.firstName)")
+                    Text("Hello \(viewModel.user.firstName ?? "No Name")")
                         .foregroundColor(.gray)
                         .fontWeight(.semibold)
                     
@@ -68,6 +68,6 @@ struct ProfileHeaderView: View {
     let user = DeveloperPreview().user
     
     return ZStack {
-        ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService(), firstName: user.firstName!, imageData: user.photoData))
+        ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService(), user: user))
     }
 }

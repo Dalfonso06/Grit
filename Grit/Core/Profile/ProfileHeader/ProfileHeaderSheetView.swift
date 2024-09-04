@@ -1,8 +1,8 @@
 //
-//  ProfileHeaderSheet.swift
+//  ProfileHeaderSheetView.swift
 //  Grit
 //
-//  Created by Daniel Alfonso on 8/29/24.
+//  Created by Daniel Alfonso on 8/31/24.
 //
 
 import SwiftUI
@@ -16,13 +16,33 @@ struct ProfileHeaderSheetView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if let _ = viewModel.user.photoData, let uiImage = UIImage(data: viewModel.user.photoData!) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 120, height: 120)
+                    .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
+            }
+            
+            HStack {
+                Text("\(viewModel.user.firstName!) \(viewModel.user.lastName!)")
+                    .font(.title)
+                    .fontWeight(.semibold)
+            }
+        }
     }
 }
 
 #Preview {
     let user = DeveloperPreview().user
-    let container = DependencyContainer()
     
-    return ProfileHeaderSheetView(viewModel: ProfileHeaderSheetViewModel(user: user, userService: container.userService))
+    return ZStack {
+        ProfileHeaderSheetView(viewModel: ProfileHeaderSheetViewModel(user: user))
+    }
+    .frame(width: 350)
+    .padding()
+    .background(Color.white)
+    .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
+    .shadow(radius: 20)
 }
