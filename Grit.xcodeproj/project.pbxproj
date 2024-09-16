@@ -11,7 +11,6 @@
 		241CB9332B5751D0008D2691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CB9322B5751D0008D2691 /* ContentView.swift */; };
 		241CB9352B5751D4008D2691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241CB9342B5751D4008D2691 /* Assets.xcassets */; };
 		241CB9382B5751D4008D2691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241CB9372B5751D4008D2691 /* Preview Assets.xcassets */; };
-		242B04CF2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242B04CE2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift */; };
 		2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B42B575B7700416DB6 /* ProfileView.swift */; };
 		2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B62B575B8600416DB6 /* ActionView.swift */; };
 		2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466C0B92B575B9C00416DB6 /* HomeView.swift */; };
@@ -58,7 +57,6 @@
 		24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C017012B6737C300945665 /* BackgroundColorView.swift */; };
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
-		24F3E0502C83696200C308CD /* ProfileHeaderSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E04F2C83696200C308CD /* ProfileHeaderSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +65,6 @@
 		241CB9322B5751D0008D2691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		241CB9342B5751D4008D2691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		241CB9372B5751D4008D2691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		242B04CE2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderSheetViewModel.swift; sourceTree = "<group>"; };
 		2466C0B42B575B7700416DB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2466C0B62B575B8600416DB6 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		2466C0B92B575B9C00416DB6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -107,7 +104,6 @@
 		24C017012B6737C300945665 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
 		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		24F3E04F2C83696200C308CD /* ProfileHeaderSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,8 +358,6 @@
 		2495CE7E2BCB456C00FF34DC /* ProfileHeader */ = {
 			isa = PBXGroup;
 			children = (
-				242B04CE2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift */,
-				24F3E04F2C83696200C308CD /* ProfileHeaderSheetView.swift */,
 				246AA2792C7264160022F72E /* ProfileHeaderViewModel.swift */,
 				2495CE812BCB45AA00FF34DC /* ProfileHeaderView.swift */,
 			);
@@ -498,7 +492,6 @@
 				247BB6392C6394D100EFD77F /* MainViewModel.swift in Sources */,
 				247BB63B2C6394F400EFD77F /* MainView.swift in Sources */,
 				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
-				24F3E0502C83696200C308CD /* ProfileHeaderSheetView.swift in Sources */,
 				247BB6342C624A7200EFD77F /* ForgotPasswordView.swift in Sources */,
 				247BB62C2C5DB4F500EFD77F /* AuthenticationServiceProtocol.swift in Sources */,
 				246AA27A2C7264160022F72E /* ProfileHeaderViewModel.swift in Sources */,
@@ -526,7 +519,6 @@
 				241CB9312B5751D0008D2691 /* GritApp.swift in Sources */,
 				24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */,
 				2495CE822BCB45AA00FF34DC /* ProfileHeaderView.swift in Sources */,
-				242B04CF2C80A3DA00B25166 /* ProfileHeaderSheetViewModel.swift in Sources */,
 				24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */,
 				2495CE942BE0667500FF34DC /* WorkoutView.swift in Sources */,
 				247BB6312C60FA9A00EFD77F /* SettingsView.swift in Sources */,
