@@ -59,6 +59,8 @@
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
 		24F3E0532CBAD16D00C308CD /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0522CBAD16D00C308CD /* ProfileInfoView.swift */; };
 		24F3E0552CBAD17B00C308CD /* ProfileInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */; };
+		24F3E0592CBAE65E00C308CD /* ProfileImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0582CBAE65E00C308CD /* ProfileImageViewModel.swift */; };
+		24F3E05B2CBAE66900C308CD /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E05A2CBAE66900C308CD /* ProfileImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,8 @@
 		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		24F3E0522CBAD16D00C308CD /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
 		24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoViewModel.swift; sourceTree = "<group>"; };
+		24F3E0582CBAE65E00C308CD /* ProfileImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewModel.swift; sourceTree = "<group>"; };
+		24F3E05A2CBAE66900C308CD /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 		2466C0AA2B57586200416DB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				24F3E0572CBAE64F00C308CD /* ProfileImage */,
 				24F3E0562CBAE4BD00C308CD /* ProfileEdit */,
 				24F3E0512CBAD15A00C308CD /* ProfileInfo */,
 				2495CE7E2BCB456C00FF34DC /* ProfileHeader */,
@@ -420,6 +425,15 @@
 			path = ProfileEdit;
 			sourceTree = "<group>";
 		};
+		24F3E0572CBAE64F00C308CD /* ProfileImage */ = {
+			isa = PBXGroup;
+			children = (
+				24F3E0582CBAE65E00C308CD /* ProfileImageViewModel.swift */,
+				24F3E05A2CBAE66900C308CD /* ProfileImageView.swift */,
+			);
+			path = ProfileImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -504,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				247BB6392C6394D100EFD77F /* MainViewModel.swift in Sources */,
+				24F3E0592CBAE65E00C308CD /* ProfileImageViewModel.swift in Sources */,
 				247BB63B2C6394F400EFD77F /* MainView.swift in Sources */,
 				2466C0B72B575B8600416DB6 /* ActionView.swift in Sources */,
 				247BB6342C624A7200EFD77F /* ForgotPasswordView.swift in Sources */,
@@ -518,6 +533,7 @@
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
 				2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */,
 				24F3E0532CBAD16D00C308CD /* ProfileInfoView.swift in Sources */,
+				24F3E05B2CBAE66900C308CD /* ProfileImageView.swift in Sources */,
 				247BB63D2C63990600EFD77F /* DependencyContainer.swift in Sources */,
 				247BB6212C58DE4C00EFD77F /* LoginViewModel.swift in Sources */,
 				247BB6362C624A7E00EFD77F /* ForgotPasswordViewModel.swift in Sources */,

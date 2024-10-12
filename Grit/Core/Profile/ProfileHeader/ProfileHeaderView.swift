@@ -18,19 +18,7 @@ struct ProfileHeaderView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             HStack {
-                if let _ = viewModel.user.photoData, let uiImage = UIImage(data: viewModel.user.photoData!) {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 120, height: 120)
-                        .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
-                } else {
-                    Image(uiImage: UIImage(named: "DefaultPFP")!)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 120, height: 120)
-                        .clipShape(RoundedRectangle(cornerRadius: DesignConstants.cornerRadius))
-                }
+                ProfileImageView(viewModel: ProfileImageViewModel(imageData: viewModel.user.photoData))
                 
                 Spacer()
                 
