@@ -57,6 +57,8 @@
 		24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C017012B6737C300945665 /* BackgroundColorView.swift */; };
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
+		24F3E0532CBAD16D00C308CD /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0522CBAD16D00C308CD /* ProfileInfoView.swift */; };
+		24F3E0552CBAD17B00C308CD /* ProfileInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,8 @@
 		24C017012B6737C300945665 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
 		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		24F3E0522CBAD16D00C308CD /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
+		24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +202,11 @@
 		2466C0AA2B57586200416DB6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				24F3E0562CBAE4BD00C308CD /* ProfileEdit */,
+				24F3E0512CBAD15A00C308CD /* ProfileInfo */,
 				2495CE7E2BCB456C00FF34DC /* ProfileHeader */,
-				2495CE832BCB486500FF34DC /* ProfileView */,
+				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
+				24C234882BA2843000B2B092 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -364,15 +371,6 @@
 			path = ProfileHeader;
 			sourceTree = "<group>";
 		};
-		2495CE832BCB486500FF34DC /* ProfileView */ = {
-			isa = PBXGroup;
-			children = (
-				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
-				24C234882BA2843000B2B092 /* ProfileViewModel.swift */,
-			);
-			path = ProfileView;
-			sourceTree = "<group>";
-		};
 		2495CE852BCB4EEE00FF34DC /* Workout */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +402,22 @@
 				2495CE962BFD85AA00FF34DC /* ExerciseCellView.swift */,
 			);
 			path = Exercise;
+			sourceTree = "<group>";
+		};
+		24F3E0512CBAD15A00C308CD /* ProfileInfo */ = {
+			isa = PBXGroup;
+			children = (
+				24F3E0522CBAD16D00C308CD /* ProfileInfoView.swift */,
+				24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */,
+			);
+			path = ProfileInfo;
+			sourceTree = "<group>";
+		};
+		24F3E0562CBAE4BD00C308CD /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileEdit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,6 +517,7 @@
 				247BB6272C5BB49000EFD77F /* SignUpViewModel.swift in Sources */,
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
 				2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */,
+				24F3E0532CBAD16D00C308CD /* ProfileInfoView.swift in Sources */,
 				247BB63D2C63990600EFD77F /* DependencyContainer.swift in Sources */,
 				247BB6212C58DE4C00EFD77F /* LoginViewModel.swift in Sources */,
 				247BB6362C624A7E00EFD77F /* ForgotPasswordViewModel.swift in Sources */,
@@ -510,6 +525,7 @@
 				2466C0B52B575B7700416DB6 /* ProfileView.swift in Sources */,
 				247BB63F2C6E2DF900EFD77F /* UserServiceProtocol.swift in Sources */,
 				249181E72B6344050009E089 /* PaletteCardView.swift in Sources */,
+				24F3E0552CBAD17B00C308CD /* ProfileInfoViewModel.swift in Sources */,
 				247BB6242C58DEC600EFD77F /* AuthenticationService.swift in Sources */,
 				2466C0BA2B575B9C00416DB6 /* HomeView.swift in Sources */,
 				2495CE8D2BCC2BDD00FF34DC /* TagView.swift in Sources */,
