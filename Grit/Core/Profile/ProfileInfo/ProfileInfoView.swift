@@ -16,9 +16,6 @@ struct ProfileInfoView: View {
     }
     
     var body: some View {
-        
-        
-        
         List {
             Section {
                 Text(viewModel.user.firstName ?? "")
