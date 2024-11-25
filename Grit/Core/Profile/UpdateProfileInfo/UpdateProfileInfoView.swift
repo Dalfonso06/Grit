@@ -29,6 +29,8 @@ struct UpdateProfileInfoView: View {
                     .textFieldStyle(.plain)
                 TextField("Email", text: $viewModel.email)
                     .textFieldStyle(.plain)
+            } header: {
+                Text("User")
             }
         }
         .navigationTitle("Update Profile")
@@ -36,10 +38,10 @@ struct UpdateProfileInfoView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if (viewModel.hasChanges) {
                     Button("Save") {
-    //                    viewModel.saveChanges {
-    //                        // Dismiss the view on successful save
-    //                        presentationMode.wrappedValue.dismiss()
-    //                    }
+                        viewModel.saveChanges {
+                            // Dismiss the view on successful save
+                            presentationMode.wrappedValue.dismiss()
+                        }
                     }
                     .foregroundColor(.blue)
                 }

@@ -212,7 +212,6 @@
 			children = (
 				24F3E05C2CBFE81B00C308CD /* UpdateProfileInfo */,
 				24F3E0572CBAE64F00C308CD /* ProfileImage */,
-				24F3E0562CBAE4BD00C308CD /* ProfileEdit */,
 				24F3E0512CBAD15A00C308CD /* ProfileInfo */,
 				2495CE7E2BCB456C00FF34DC /* ProfileHeader */,
 				2466C0B42B575B7700416DB6 /* ProfileView.swift */,
@@ -421,13 +420,6 @@
 				24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */,
 			);
 			path = ProfileInfo;
-			sourceTree = "<group>";
-		};
-		24F3E0562CBAE4BD00C308CD /* ProfileEdit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProfileEdit;
 			sourceTree = "<group>";
 		};
 		24F3E0572CBAE64F00C308CD /* ProfileImage */ = {

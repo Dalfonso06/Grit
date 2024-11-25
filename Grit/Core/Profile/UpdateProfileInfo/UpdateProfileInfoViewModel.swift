@@ -39,6 +39,36 @@ final class UpdateProfileInfoViewModel: ObservableObject {
         self.email = user.email!
     }
     
+    func saveChanges(completion: @escaping () -> Void) {
+        guard hasChanges else {
+            print("There are no changes")
+            return
+        }
+        
+        let updatedUser = User(
+            uid: self.user.uid,
+            email: email,
+            photoUrl: self.user.photoUrl,
+            firstName: firstName,
+            lastName: lastName,
+            followers: self.user.followers,
+            following: self.user.following,
+            photoData: self.user.photoData
+        )
+        
+        Task {
+            do {
+                try await userService.updateUser(user: updatedUser)
+                DispatchQueue.main.async {
+                    print("User successfully updated.")
+                    completion()
+                }
+            } catch {
+                print("Failed to update user: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     private func compareFields() {
         self.hasChanges = self.firstName != user.firstName || self.lastName != user.lastName || self.email != user.email
     }
