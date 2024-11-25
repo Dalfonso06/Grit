@@ -21,9 +21,6 @@ struct ProfileView: View {
             )
             .padding(.vertical)
             
-            workoutList
-                .padding(.vertical, 20)
-            
         }
         .navigationTitle("Profile Page")
         .toolbar(content: {
@@ -39,32 +36,6 @@ struct ProfileView: View {
                 })
             }
         })
-    }
-    
-    var workoutList: some View {
-        VStack(alignment: .leading) {
-            
-            Text("Workouts")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.horizontal)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(alignment: .top) {
-                    ForEach(viewModel.workouts) { workout in
-                        WorkoutCardView(
-                            workoutName: workout.name,
-                            firstname: "Daniel",
-                            tags: workout.tags,
-                            description: workout.description
-                        )
-                        .scrollTargetLayout()
-                        .padding()
-                    }
-                }
-            }
-            .scrollTargetBehavior(.viewAligned)
-        }
     }
 }
 

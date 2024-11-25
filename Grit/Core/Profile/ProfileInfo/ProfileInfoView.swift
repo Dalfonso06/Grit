@@ -26,11 +26,15 @@ struct ProfileInfoView: View {
             }
         }
         .listStyle(.inset)
-        .toolbar{
-            Button("Edit") {
-                print("Pressed")
+        .toolbar {
+            NavigationLink("Edit") {
+                UpdateProfileInfoView(
+                    viewModel: UpdateProfileInfoViewModel(
+                        user: viewModel.user,
+                        userService: viewModel.userService
+                    ))
             }
-            .foregroundColor(.blue)
+            .foregroundStyle(.blue)
         }
         .navigationTitle("User Info")
     }

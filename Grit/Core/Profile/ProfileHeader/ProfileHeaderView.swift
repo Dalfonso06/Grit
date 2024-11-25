@@ -35,14 +35,20 @@ struct ProfileHeaderView: View {
                 Spacer()
             }
             
-            Button(action: {
-                print("Pressed")
-            }, label: {
-                Image(systemName: "ellipsis")
-                    .foregroundStyle(Color.gray)
-                    .padding(5)
-                    .font(.title)
-            })
+            NavigationLink(
+                destination: ProfileInfoView(
+                    viewModel: ProfileInfoViewModel(
+                        userService: viewModel.userService,
+                        user: viewModel.user
+                    )
+                ),
+                label: {
+                    Image(systemName: "ellipsis")
+                        .foregroundStyle(Color.gray)
+                        .padding(5)
+                        .font(.title)
+                }
+            )
             
         }
         .frame(maxWidth: .infinity)
