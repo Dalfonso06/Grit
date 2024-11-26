@@ -1,4 +1,5 @@
 {
+  "originHash" : "6073422226b4018c17f25a973c20b16012d706cff6752d264021fbcb731d1709",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -16,6 +17,15 @@
       "state" : {
         "revision" : "3b62f154d00019ae29a71e9738800bb6f18b236d",
         "version" : "10.19.2"
+      }
+    },
+    {
+      "identity" : "dependency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/chFlorian/Dependency.git",
+      "state" : {
+        "revision" : "aa9b0323432eb7b27ef1ecbf5193e73caf50d064",
+        "version" : "1.0.0"
       }
     },
     {
@@ -118,5 +128,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

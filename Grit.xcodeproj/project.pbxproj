@@ -57,6 +57,7 @@
 		24C017022B6737C300945665 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C017012B6737C300945665 /* BackgroundColorView.swift */; };
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
+		24F118232CF6018D00C51351 /* Dependency in Frameworks */ = {isa = PBXBuildFile; productRef = 24F118222CF6018D00C51351 /* Dependency */; };
 		24F3E0532CBAD16D00C308CD /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0522CBAD16D00C308CD /* ProfileInfoView.swift */; };
 		24F3E0552CBAD17B00C308CD /* ProfileInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */; };
 		24F3E0592CBAE65E00C308CD /* ProfileImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0582CBAE65E00C308CD /* ProfileImageViewModel.swift */; };
@@ -124,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				247BB61B2C518ABB00EFD77F /* FirebaseAnalytics in Frameworks */,
+				24F118232CF6018D00C51351 /* Dependency in Frameworks */,
 				247BB5F82C445CD500EFD77F /* FirebaseFirestore in Frameworks */,
 				247BB5E42C445CD500EFD77F /* FirebaseAnalyticsSwift in Frameworks */,
 				247BB5FC2C445CD500EFD77F /* FirebaseFirestoreSwift in Frameworks */,
@@ -464,6 +466,7 @@
 				247BB5FB2C445CD500EFD77F /* FirebaseFirestoreSwift */,
 				247BB6112C445CD500EFD77F /* FirebaseStorage */,
 				247BB61A2C518ABB00EFD77F /* FirebaseAnalytics */,
+				24F118222CF6018D00C51351 /* Dependency */,
 			);
 			productName = Grit;
 			productReference = 241CB92D2B5751D0008D2691 /* Grit.app */;
@@ -495,6 +498,7 @@
 			mainGroup = 241CB9242B5751D0008D2691;
 			packageReferences = (
 				247BB5DE2C445CD500EFD77F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				24F118212CF6018D00C51351 /* XCRemoteSwiftPackageReference "Dependency" */,
 			);
 			productRefGroup = 241CB92E2B5751D0008D2691 /* Products */;
 			projectDirPath = "";
@@ -785,6 +789,14 @@
 				minimumVersion = 10.29.0;
 			};
 		};
+		24F118212CF6018D00C51351 /* XCRemoteSwiftPackageReference "Dependency" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chFlorian/Dependency.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -822,6 +834,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 247BB5DE2C445CD500EFD77F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		24F118222CF6018D00C51351 /* Dependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24F118212CF6018D00C51351 /* XCRemoteSwiftPackageReference "Dependency" */;
+			productName = Dependency;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
