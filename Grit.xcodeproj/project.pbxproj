@@ -58,6 +58,7 @@
 		24C234872B93923900B2B092 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234862B93923900B2B092 /* PreviewProvider.swift */; };
 		24C234892BA2843000B2B092 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C234882BA2843000B2B092 /* ProfileViewModel.swift */; };
 		24F118232CF6018D00C51351 /* Dependency in Frameworks */ = {isa = PBXBuildFile; productRef = 24F118222CF6018D00C51351 /* Dependency */; };
+		24F118252CF601E600C51351 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F118242CF601E600C51351 /* Dependencies.swift */; };
 		24F3E0532CBAD16D00C308CD /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0522CBAD16D00C308CD /* ProfileInfoView.swift */; };
 		24F3E0552CBAD17B00C308CD /* ProfileInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */; };
 		24F3E0592CBAE65E00C308CD /* ProfileImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3E0582CBAE65E00C308CD /* ProfileImageViewModel.swift */; };
@@ -111,6 +112,7 @@
 		24C017012B6737C300945665 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
 		24C234862B93923900B2B092 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		24C234882BA2843000B2B092 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		24F118242CF601E600C51351 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		24F3E0522CBAD16D00C308CD /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
 		24F3E0542CBAD17B00C308CD /* ProfileInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoViewModel.swift; sourceTree = "<group>"; };
 		24F3E0582CBAE65E00C308CD /* ProfileImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewModel.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				2482B7822B5F58EF00A35D17 /* Extensions */,
 				2462AAA52B792CED00FBF017 /* Models */,
 				247BB63C2C63990600EFD77F /* DependencyContainer.swift */,
+				24F118242CF601E600C51351 /* Dependencies.swift */,
 				241CB9302B5751D0008D2691 /* GritApp.swift */,
 				241CB9322B5751D0008D2691 /* ContentView.swift */,
 				241CB9342B5751D4008D2691 /* Assets.xcassets */,
@@ -544,6 +547,7 @@
 				247BB6272C5BB49000EFD77F /* SignUpViewModel.swift in Sources */,
 				247B720F2B796D500025061C /* ExerciseModel.swift in Sources */,
 				2495CE902BD42BD800FF34DC /* DesignConstants.swift in Sources */,
+				24F118252CF601E600C51351 /* Dependencies.swift in Sources */,
 				24F3E0532CBAD16D00C308CD /* ProfileInfoView.swift in Sources */,
 				24F3E05B2CBAE66900C308CD /* ProfileImageView.swift in Sources */,
 				247BB63D2C63990600EFD77F /* DependencyContainer.swift in Sources */,
