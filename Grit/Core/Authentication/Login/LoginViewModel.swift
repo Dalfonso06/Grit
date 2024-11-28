@@ -22,8 +22,6 @@ final class LoginViewModel: ObservableObject {
     var updateLoginStatus: () -> Void?
     
     init(
-        authService: AuthenticationServiceProtocol,
-        userService: UserServiceProtocol,
         mainViewModel: MainViewModel,
         updateLoginStatus: @escaping () -> Void
     ) {

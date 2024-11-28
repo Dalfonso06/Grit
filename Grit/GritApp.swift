@@ -25,7 +25,7 @@ struct GritApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ContentViewModel(container: container))
+            ContentView()
         }
     }
 }

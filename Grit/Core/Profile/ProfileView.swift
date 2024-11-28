@@ -29,7 +29,7 @@ struct ProfileView: View {
                 Spacer()
                 
                 NavigationLink(destination: {
-                    SettingsView(viewModel: SettingsViewModel(authService: viewModel.container.authService, updateLoginStatus: {
+                    SettingsView(viewModel: SettingsViewModel(updateLoginStatus: {
                         viewModel.updateLoginStatus()
                     }))
                 }, label: {
@@ -41,11 +41,10 @@ struct ProfileView: View {
 }
 
 #Preview {
-    let container = DependencyContainer()
     let user = DeveloperPreview().user
     
     return NavigationStack {
-        ProfileView(viewModel: ProfileViewModel(container: container, user: user, updateLoginStatus: {
+        ProfileView(viewModel: ProfileViewModel(user: user, updateLoginStatus: {
             print("Action")
         }))
     }

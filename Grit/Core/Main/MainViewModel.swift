@@ -6,20 +6,16 @@
 //
 
 import Foundation
+import Dependency
 
 final class MainViewModel: ObservableObject {
     
-    @Published var container: DependencyContainer
     @Published var isLoggedIn: Bool = false
     @Published var user: User?
     
-    var authService: AuthenticationServiceProtocol { container.authService }
-    var userService: UserServiceProtocol { container.userService }
-    
-    init(container: DependencyContainer) {
-        self.container = container
-    }
-    
+    @Dependency(\.authService) var authService: AuthenticationServiceProtocol
+    @Dependency(\.userService) var userService: UserServiceProtocol
+        
     func updateLoginStatus() -> Void {
         self.isLoggedIn = authService.isLoggedIn()
     }

@@ -74,15 +74,9 @@ struct LoginView: View {
 }
 
 #Preview {
-    let container = DependencyContainer()
-    let authService = container.authService
-    let userService = container.userService
-    
-    return NavigationStack() {
+    NavigationStack() {
         LoginView(viewModel: LoginViewModel(
-            authService: authService,
-            userService: userService,
-            mainViewModel: MainViewModel(container: container),
+            mainViewModel: MainViewModel(),
             updateLoginStatus: {
                 print("Preview")
         }))

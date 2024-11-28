@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import Dependency
 
 final class SettingsViewModel: ObservableObject {
     
     private var wasDeleted: Bool = false
-    private let authService: AuthenticationServiceProtocol
+    
+    @Dependency(\.authService) var authService: AuthenticationServiceProtocol
     var updateLoginStatus: () -> Void
     
-    init(authService: AuthenticationServiceProtocol, updateLoginStatus: @escaping () -> Void) {
-        self.authService = authService
+    init(updateLoginStatus: @escaping () -> Void) {
         self.updateLoginStatus = updateLoginStatus
     }
     
