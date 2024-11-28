@@ -45,6 +45,8 @@ struct SettingsView: View {
 
 #Preview {
     NavigationStack {
-        SettingsView(viewModel: SettingsViewModel(authService: AuthenticationService(), updateLoginStatus: {}))
+        SettingsView(viewModel: SettingsViewModel(updateLoginStatus: {
+            print("Action")
+        }))
     }
 }

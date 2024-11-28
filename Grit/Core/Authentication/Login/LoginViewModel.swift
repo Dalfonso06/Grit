@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Dependency
 
 final class LoginViewModel: ObservableObject {
     
@@ -16,18 +17,14 @@ final class LoginViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     weak var mainViewModel: MainViewModel?
     
-    @Published var authService: AuthenticationServiceProtocol
-    @Published var userService: UserServiceProtocol
+    @Dependency(\.authService) var authService: AuthenticationServiceProtocol
+    @Dependency(\.userService) var userService: UserServiceProtocol
     var updateLoginStatus: () -> Void?
     
     init(
-        authService: AuthenticationServiceProtocol,
-        userService: UserServiceProtocol,
         mainViewModel: MainViewModel,
         updateLoginStatus: @escaping () -> Void
     ) {
-        self.authService = authService
-        self.userService = userService
         self.mainViewModel = mainViewModel
         self.updateLoginStatus = updateLoginStatus
     }
