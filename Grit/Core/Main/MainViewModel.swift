@@ -18,5 +18,21 @@ final class MainViewModel: ObservableObject {
         
     func updateLoginStatus() -> Void {
         self.isLoggedIn = authService.isLoggedIn()
+        
+        guard self.isLoggedIn, let uid = user?.uid, !uid.isEmpty else {
+            self.user = nil
+            return
+        }
+        
+        Task {
+            do {
+                let userData = try await userService.getUserData(uid: uid)
+                DispatchQueue.main.async {
+                    self.user = userData
+                }
+            } catch {
+                print("There was an error fetching user data: \(error.localizedDescription)")
+            }
+        }
     }
 }

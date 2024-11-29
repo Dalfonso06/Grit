@@ -22,4 +22,16 @@ class ProfileViewModel: ObservableObject {
         self.updateLoginStatus = updateLoginStatus
     }
     
+    func updateUserInformation() -> Void {
+        Task {
+            do {
+                let userData = try await userService.getUserData(uid: user.uid)
+                DispatchQueue.main.async {
+                    self.user = userData
+                }
+            } catch {
+                print("Something went wrong fetching user data: \(error)")
+            }
+        }
+    }
 }
