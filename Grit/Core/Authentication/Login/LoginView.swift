@@ -74,9 +74,12 @@ struct LoginView: View {
 }
 
 #Preview {
-    NavigationStack() {
+    let userSession = UserSession()
+    userSession.user = DeveloperPreview().user
+    
+    return NavigationStack() {
         LoginView(viewModel: LoginViewModel(
-            mainViewModel: MainViewModel(),
+            mainViewModel: MainViewModel(userSession: userSession),
             updateLoginStatus: {
                 print("Preview")
         }))

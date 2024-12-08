@@ -21,7 +21,6 @@ class AppDelegate : NSObject, UIApplicationDelegate {
 struct GritApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    let container = DependencyContainer()
     
     var body: some Scene {
         WindowGroup {

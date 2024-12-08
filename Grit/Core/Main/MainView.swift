@@ -16,7 +16,7 @@ struct MainView: View {
     }
     
     var body: some View {
-        if let user = viewModel.user, viewModel.isLoggedIn {
+        if let user = viewModel.userSession.user, viewModel.userSession.isLoggedIn {
             TabView {
                 HomeView()
                     .tabItem {
@@ -48,7 +48,11 @@ struct MainView: View {
 }
 
 #Preview {
-    NavigationStack {
-        MainView(viewModel: MainViewModel())
+    let userSession = UserSession()
+    userSession.user = DeveloperPreview().user
+    
+    return NavigationStack {
+        MainView(viewModel: MainViewModel(userSession: userSession))
+            .environmentObject(userSession)
     }
 }

@@ -47,7 +47,8 @@ final class LoginViewModel: ObservableObject {
                 let uid = try await authService.signIn(email: self.email, password: self.password)
                 let user = try await userService.getUserData(uid: uid)
                 DispatchQueue.main.async {
-                    self.mainViewModel?.user = user
+                    // MARK: Use the user session
+                    self.mainViewModel?.userSession.user = user
                 }
                 print("Successful Login: \(user)")
             } catch {

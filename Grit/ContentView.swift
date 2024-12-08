@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var userSession = UserSession()
 
     var body: some View {
         NavigationStack {
-            MainView(viewModel: MainViewModel())
+            MainView(viewModel: MainViewModel(userSession: userSession))
         }
+        .environmentObject(userSession)
     }
 }
 
