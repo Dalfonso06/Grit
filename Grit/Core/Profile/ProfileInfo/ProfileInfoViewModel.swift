@@ -8,10 +8,5 @@
 import Foundation
 
 final class ProfileInfoViewModel: ObservableObject {
-    
-    @Published var userService: UserServiceProtocol
-    
-    init(userService: UserServiceProtocol) {
-        self.userService = userService
-    }
+    init() {}
 }

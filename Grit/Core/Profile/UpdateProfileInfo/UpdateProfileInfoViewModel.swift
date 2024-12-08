@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Dependency
 
 final class UpdateProfileInfoViewModel: ObservableObject {
     
@@ -29,10 +30,9 @@ final class UpdateProfileInfoViewModel: ObservableObject {
     @Published var hasChanges: Bool = false
     @Published var userSession: UserSession
 
-    @Published var userService: UserServiceProtocol
+    @Dependency(\.userService) var userService: UserServiceProtocol
     
-    init(userService: UserServiceProtocol, userSession: UserSession) {
-        self.userService = userService
+    init(userSession: UserSession) {
         self.userSession = userSession
         self.firstName = userSession.user?.firstName ?? ""
         self.lastName = userSession.user?.lastName ?? ""

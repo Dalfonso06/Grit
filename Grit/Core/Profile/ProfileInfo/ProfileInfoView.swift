@@ -30,10 +30,8 @@ struct ProfileInfoView: View {
         .toolbar {
             NavigationLink("Edit") {
                 UpdateProfileInfoView(
-                    viewModel: UpdateProfileInfoViewModel(
-                        userService: viewModel.userService,
-                        userSession: userSession
-                    ))
+                    viewModel: UpdateProfileInfoViewModel(userSession: userSession)
+                )
             }
             .foregroundStyle(.blue)
         }
@@ -42,9 +40,7 @@ struct ProfileInfoView: View {
 }
 
 #Preview {
-    let user = DeveloperPreview().user
-    let userService = UserService()
-    let viewModel = ProfileInfoViewModel(userService: userService)
+    let viewModel = ProfileInfoViewModel()
     
     let userSession = UserSession()
     userSession.user = DeveloperPreview().user

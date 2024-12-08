@@ -56,7 +56,7 @@ struct UpdateProfileInfoView: View {
 #Preview {
     let userSession = UserSession()
     userSession.user = DeveloperPreview().user
-    let viewModel = UpdateProfileInfoViewModel(userService: UserService(), userSession: userSession)
+    let viewModel = UpdateProfileInfoViewModel(userSession: userSession)
     
     return NavigationStack {
         UpdateProfileInfoView(viewModel: viewModel)

@@ -38,9 +38,7 @@ struct ProfileHeaderView: View {
             
             NavigationLink(
                 destination: ProfileInfoView(
-                    viewModel: ProfileInfoViewModel(
-                        userService: viewModel.userService
-                    )
+                    viewModel: ProfileInfoViewModel()
                 ),
                 label: {
                     Image(systemName: "ellipsis")
