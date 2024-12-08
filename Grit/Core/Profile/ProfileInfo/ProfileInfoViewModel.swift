@@ -9,11 +9,9 @@ import Foundation
 
 final class ProfileInfoViewModel: ObservableObject {
     
-    @Published var user: User
     @Published var userService: UserServiceProtocol
     
-    init(userService: UserServiceProtocol, user: User) {
+    init(userService: UserServiceProtocol) {
         self.userService = userService
-        self.user = user
     }
 }

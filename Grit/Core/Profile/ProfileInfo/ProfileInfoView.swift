@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileInfoView: View {
     
     @StateObject private var viewModel: ProfileInfoViewModel
+    @EnvironmentObject var userSession: UserSession
     
     init (viewModel: ProfileInfoViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -18,9 +19,9 @@ struct ProfileInfoView: View {
     var body: some View {
         List {
             Section {
-                Text(viewModel.user.firstName ?? "")
-                Text(viewModel.user.lastName ?? "")
-                Text(viewModel.user.email ?? "No Email")
+                Text(userSession.user?.firstName ?? "")
+                Text(userSession.user?.lastName ?? "")
+                Text(userSession.user?.email ?? "No Email")
             } header: {
                 Text("User")
             }
@@ -30,8 +31,8 @@ struct ProfileInfoView: View {
             NavigationLink("Edit") {
                 UpdateProfileInfoView(
                     viewModel: UpdateProfileInfoViewModel(
-                        user: viewModel.user,
-                        userService: viewModel.userService
+                        userService: viewModel.userService,
+                        userSession: userSession
                     ))
             }
             .foregroundStyle(.blue)
@@ -43,9 +44,14 @@ struct ProfileInfoView: View {
 #Preview {
     let user = DeveloperPreview().user
     let userService = UserService()
-    let viewModel = ProfileInfoViewModel(userService: userService, user: user)
+    let viewModel = ProfileInfoViewModel(userService: userService)
+    
+    let userSession = UserSession()
+    userSession.user = DeveloperPreview().user
+    userSession.isLoggedIn = true
     
     return NavigationStack {
         ProfileInfoView(viewModel: viewModel)
+            .environmentObject(userSession)
     }
 }

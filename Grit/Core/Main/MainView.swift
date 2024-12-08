@@ -16,7 +16,7 @@ struct MainView: View {
     }
     
     var body: some View {
-        if let user = viewModel.userSession.user, viewModel.userSession.isLoggedIn {
+        if viewModel.userSession.user != nil, viewModel.userSession.isLoggedIn {
             TabView {
                 HomeView()
                     .tabItem {
@@ -31,7 +31,7 @@ struct MainView: View {
                     }
 
                 
-                ProfileView(viewModel: ProfileViewModel(user: user, updateLoginStatus: {
+                ProfileView(viewModel: ProfileViewModel(updateLoginStatus: {
                     viewModel.updateLoginStatus()
                 }))
                 .tabItem {

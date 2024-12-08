@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @StateObject var userSession = UserSession()
 
     var body: some View {

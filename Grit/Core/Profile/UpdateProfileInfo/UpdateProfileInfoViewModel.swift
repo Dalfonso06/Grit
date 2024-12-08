@@ -27,16 +27,16 @@ final class UpdateProfileInfoViewModel: ObservableObject {
     }
     
     @Published var hasChanges: Bool = false
-    
-    @Published var user: User
+    @Published var userSession: UserSession
+
     @Published var userService: UserServiceProtocol
     
-    init(user: User, userService: UserServiceProtocol) {
-        self.user = user
+    init(userService: UserServiceProtocol, userSession: UserSession) {
         self.userService = userService
-        self.firstName = user.firstName!
-        self.lastName = user.lastName!
-        self.email = user.email!
+        self.userSession = userSession
+        self.firstName = userSession.user?.firstName ?? ""
+        self.lastName = userSession.user?.lastName ?? ""
+        self.email = userSession.user?.email ?? ""
     }
     
     func saveChanges(completion: @escaping () -> Void) {
@@ -46,14 +46,14 @@ final class UpdateProfileInfoViewModel: ObservableObject {
         }
         
         let updatedUser = User(
-            uid: self.user.uid,
+            uid: (self.userSession.user?.uid)!,
             email: email,
-            photoUrl: self.user.photoUrl,
+            photoUrl: self.userSession.user?.photoUrl,
             firstName: firstName,
             lastName: lastName,
-            followers: self.user.followers,
-            following: self.user.following,
-            photoData: self.user.photoData
+            followers: self.userSession.user?.followers,
+            following: self.userSession.user?.following,
+            photoData: self.userSession.user?.photoData
         )
         
         Task {
@@ -70,6 +70,6 @@ final class UpdateProfileInfoViewModel: ObservableObject {
     }
     
     private func compareFields() {
-        self.hasChanges = self.firstName != user.firstName || self.lastName != user.lastName || self.email != user.email
+        self.hasChanges = self.firstName != self.userSession.user?.firstName || self.lastName != self.userSession.user?.lastName || self.email != self.userSession.user?.email
     }
 }

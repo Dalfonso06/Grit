@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileHeaderView: View {
     
     @StateObject private var viewModel: ProfileHeaderViewModel
+    @EnvironmentObject var userSession: UserSession
     
     init(viewModel: ProfileHeaderViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -18,12 +19,12 @@ struct ProfileHeaderView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             HStack {
-                ProfileImageView(viewModel: ProfileImageViewModel(imageData: viewModel.user.photoData))
+                ProfileImageView(viewModel: ProfileImageViewModel(imageData: userSession.user?.photoData))
                 
                 Spacer()
                 
                 VStack(alignment: .leading) {
-                    Text("Hello \(viewModel.user.firstName ?? "No Name")")
+                    Text("Hello \(userSession.user?.firstName ?? "No Name")")
                         .foregroundColor(.gray)
                         .fontWeight(.semibold)
                     
@@ -38,8 +39,7 @@ struct ProfileHeaderView: View {
             NavigationLink(
                 destination: ProfileInfoView(
                     viewModel: ProfileInfoViewModel(
-                        userService: viewModel.userService,
-                        user: viewModel.user
+                        userService: viewModel.userService
                     )
                 ),
                 label: {
@@ -59,9 +59,11 @@ struct ProfileHeaderView: View {
 }
 
 #Preview {
-    let user = DeveloperPreview().user
+    let userSession = UserSession()
+    userSession.user = DeveloperPreview().user
     
     return ZStack {
-        ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService(), user: user))
+        ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService()))
+            .environmentObject(userSession)
     }
 }

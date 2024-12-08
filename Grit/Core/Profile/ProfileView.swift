@@ -16,8 +16,7 @@ struct ProfileView: View {
         ScrollView {
             ProfileHeaderView(
                 viewModel: ProfileHeaderViewModel(
-                    userService: viewModel.userService,
-                    user: viewModel.user
+                    userService: viewModel.userService
                 )
             )
             .padding(.vertical)
@@ -41,11 +40,14 @@ struct ProfileView: View {
 }
 
 #Preview {
-    let user = DeveloperPreview().user
+    let userSession = UserSession()
+    userSession.isLoggedIn = true
+    userSession.user = DeveloperPreview().user
     
     return NavigationStack {
-        ProfileView(viewModel: ProfileViewModel(user: user, updateLoginStatus: {
+        ProfileView(viewModel: ProfileViewModel(updateLoginStatus: {
             print("Action")
         }))
+        .environmentObject(userSession)
     }
 }
