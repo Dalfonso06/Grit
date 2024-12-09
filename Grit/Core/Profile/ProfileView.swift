@@ -15,9 +15,7 @@ struct ProfileView: View {
     var body: some View {
         ScrollView {
             ProfileHeaderView(
-                viewModel: ProfileHeaderViewModel(
-                    userService: viewModel.userService
-                )
+                viewModel: ProfileHeaderViewModel()
             )
             .padding(.vertical)
             

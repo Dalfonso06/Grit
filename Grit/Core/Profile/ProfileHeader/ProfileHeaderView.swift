@@ -61,7 +61,7 @@ struct ProfileHeaderView: View {
     userSession.user = DeveloperPreview().user
     
     return ZStack {
-        ProfileHeaderView(viewModel: ProfileHeaderViewModel(userService: UserService()))
+        ProfileHeaderView(viewModel: ProfileHeaderViewModel())
             .environmentObject(userSession)
     }
 }
