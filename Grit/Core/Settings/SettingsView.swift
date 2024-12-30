@@ -12,10 +12,6 @@ struct SettingsView: View {
     @StateObject var viewModel: SettingsViewModel
     @Environment(\.dismiss) private var dismiss
     
-    init(viewModel: SettingsViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
-    
     var body: some View {
         List {
             Button (action: {

@@ -9,12 +9,8 @@ import SwiftUI
 
 struct ProfileInfoView: View {
     
-    @StateObject private var viewModel: ProfileInfoViewModel
+    @StateObject var viewModel: ProfileInfoViewModel
     @EnvironmentObject var userSession: UserSession
-    
-    init (viewModel: ProfileInfoViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
     
     var body: some View {
         List {

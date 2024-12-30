@@ -9,15 +9,11 @@ import SwiftUI
 
 struct UpdateProfileInfoView: View {
     
-    @StateObject private var viewModel: UpdateProfileInfoViewModel
+    @StateObject var viewModel: UpdateProfileInfoViewModel
     @Environment(\.presentationMode) var presentationMode
     
     @State var showError: Bool = false
     @State var errorMessage: String = "Test error"
-    
-    init (viewModel: UpdateProfileInfoViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
     
     var body: some View {
         Form {

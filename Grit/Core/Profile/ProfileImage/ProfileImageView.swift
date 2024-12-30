@@ -9,11 +9,7 @@ import SwiftUI
 
 struct ProfileImageView: View {
     
-    @StateObject private var viewModel: ProfileImageViewModel
-    
-    init (viewModel: ProfileImageViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
+    @StateObject var viewModel: ProfileImageViewModel
     
     var body: some View {
         if let _ = viewModel.imageData, let uiImage = UIImage(data: viewModel.imageData!) {

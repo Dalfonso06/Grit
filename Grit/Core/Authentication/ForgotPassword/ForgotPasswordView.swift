@@ -9,12 +9,8 @@ import SwiftUI
 
 struct ForgotPasswordView: View {
     
-    @StateObject private var viewModel: ForgotPasswordViewModel
+    @StateObject var viewModel: ForgotPasswordViewModel
     @Environment(\.dismiss) private var dismiss
-    
-    init(viewModel: ForgotPasswordViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
     
     var body: some View {
         VStack {

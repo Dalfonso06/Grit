@@ -9,12 +9,8 @@ import SwiftUI
 
 struct ProfileHeaderView: View {
     
-    @StateObject private var viewModel: ProfileHeaderViewModel
+    @StateObject var viewModel: ProfileHeaderViewModel
     @EnvironmentObject var userSession: UserSession
-    
-    init(viewModel: ProfileHeaderViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
     
     var body: some View {
         ZStack(alignment: .topTrailing) {

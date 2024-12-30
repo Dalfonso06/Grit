@@ -9,14 +9,11 @@ import SwiftUI
 
 struct MainView: View {
     
-    @StateObject private var viewModel: MainViewModel
-    
-    init(viewModel: MainViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
+    @StateObject var viewModel: MainViewModel
+    @EnvironmentObject var userSession: UserSession
     
     var body: some View {
-        if viewModel.userSession.user != nil, viewModel.userSession.isLoggedIn {
+        if userSession.user != nil, userSession.isLoggedIn {
             TabView {
                 HomeView()
                     .tabItem {
